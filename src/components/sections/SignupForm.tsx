@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { PasswordInput } from '@/components/ui/password-input'
 import { useLocalizedPath } from '@/hooks/useLang'
 import { useSimpleForm } from '@/hooks/useSimpleForm'
-import { isEmail, minPasswordLength } from '@/lib/validators'
+import { cleanName, isEmail, isName, isStrongPassword, maxPasswordLength, minPasswordLength } from '@/lib/validators'
 import { signup } from '@/lib/auth'
 
 const linkClass = 'font-semibold text-brand underline underline-offset-4'
@@ -19,13 +19,15 @@ export function SignupForm() {
     idPrefix: 'signup',
     initial: { name: '', email: '', password: '', confirm: '', terms: false },
     validate: (v) => ({
-      name: v.name.trim() ? undefined : t('errors.name'),
+      name: !v.name.trim() ? t('errors.name') : !isName(v.name) ? t('errors.nameInvalid') : undefined,
       email: !v.email.trim() ? t('errors.emailRequired') : !isEmail(v.email) ? t('errors.emailInvalid') : undefined,
       password: !v.password
         ? t('errors.passwordRequired')
         : v.password.length < minPasswordLength
           ? t('errors.passwordShort', { min: minPasswordLength })
-          : undefined,
+          : !isStrongPassword(v.password)
+            ? t('errors.passwordWeak')
+            : undefined,
       confirm: v.confirm === v.password ? undefined : t('errors.passwordMismatch'),
       terms: v.terms ? undefined : t('errors.terms'),
     }),
@@ -41,7 +43,8 @@ export function SignupForm() {
           name="name"
           autoComplete="name"
           value={form.values.name}
-          onChange={(e) => form.setValue('name', e.target.value)}
+          maxLength={60}
+          onChange={(e) => form.setValue('name', cleanName(e.target.value))}
           aria-invalid={!!form.errors.name}
           aria-describedby={form.errors.name ? 'signup-name-error' : undefined}
         />
@@ -51,12 +54,11 @@ export function SignupForm() {
           id="signup-email"
           name="email"
           type="email"
-          dir="ltr"
           autoComplete="email"
           inputMode="email"
-          className="text-start"
           value={form.values.email}
-          onChange={(e) => form.setValue('email', e.target.value)}
+          maxLength={120}
+          onChange={(e) => form.setValue('email', e.target.value.replace(/\s/g, ''))}
           aria-invalid={!!form.errors.email}
           aria-describedby={form.errors.email ? 'signup-email-error' : undefined}
         />
@@ -70,7 +72,8 @@ export function SignupForm() {
             showLabel={t('fields.show')}
             hideLabel={t('fields.hide')}
             value={form.values.password}
-            onChange={(e) => form.setValue('password', e.target.value)}
+            maxLength={maxPasswordLength}
+            onChange={(e) => form.setValue('password', e.target.value.replace(/\s/g, ''))}
             aria-invalid={!!form.errors.password}
             aria-describedby={form.errors.password ? 'signup-password-error' : undefined}
           />
@@ -83,7 +86,8 @@ export function SignupForm() {
             showLabel={t('fields.show')}
             hideLabel={t('fields.hide')}
             value={form.values.confirm}
-            onChange={(e) => form.setValue('confirm', e.target.value)}
+            maxLength={maxPasswordLength}
+            onChange={(e) => form.setValue('confirm', e.target.value.replace(/\s/g, ''))}
             aria-invalid={!!form.errors.confirm}
             aria-describedby={form.errors.confirm ? 'signup-confirm-error' : undefined}
           />

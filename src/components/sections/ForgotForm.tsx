@@ -27,12 +27,11 @@ export function ForgotForm() {
           id="forgot-email"
           name="email"
           type="email"
-          dir="ltr"
           autoComplete="email"
           inputMode="email"
-          className="text-start"
           value={form.values.email}
-          onChange={(e) => form.setValue('email', e.target.value)}
+          maxLength={120}
+          onChange={(e) => form.setValue('email', e.target.value.replace(/\s/g, ''))}
           aria-invalid={!!form.errors.email}
           aria-describedby={form.errors.email ? 'forgot-email-error' : undefined}
         />

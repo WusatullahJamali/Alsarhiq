@@ -57,9 +57,9 @@ export function Footer() {
           </FooterColumn>
 
           <FooterColumn title={t('nav.services')}>
-            {services.map((service) => (
+            {services.map((service, i) => (
               <li key={service.title}>
-                <Link to={to('services')} className={footerLink}>
+                <Link to={`${to('services')}#service-${i + 1}`} className={footerLink}>
                   {service.kicker}
                 </Link>
               </li>
@@ -83,9 +83,9 @@ export function Footer() {
             )}
             <li className="flex min-h-11 items-center gap-2.5">
               <Globe aria-hidden="true" className="size-4 shrink-0 text-gold" />
-              <bdi dir="ltr" className="font-semibold text-dark-fg">
+              <a href={siteConfig.url} dir="ltr" className={`${footerLink} font-semibold text-dark-fg`}>
                 {siteConfig.domain}
-              </bdi>
+              </a>
             </li>
             <li className="flex min-h-11 items-center gap-2.5">
               <MapPin aria-hidden="true" className="size-4 shrink-0 text-gold" />

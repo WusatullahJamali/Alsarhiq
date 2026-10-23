@@ -12,7 +12,7 @@ import { useItems } from '@/hooks/useContent'
 import { useLang } from '@/hooks/useLang'
 import { useSimpleForm } from '@/hooks/useSimpleForm'
 import { isValidPhone, normalizePhone } from '@/lib/phone'
-import { isEmail } from '@/lib/validators'
+import { cleanName, cleanPhone, isEmail, isName } from '@/lib/validators'
 import { contactMode, sendContact } from '@/lib/contact'
 
 const subjectValues = ['contracting', 'supply', 'investment', 'healthcare', 'correctional', 'government', 'industrial', 'digital'] as const
@@ -28,10 +28,10 @@ export function ContactForm() {
     initial: { name: '', email: '', phone: '', subject: subjectValues[0] as string, message: '' },
     resetOnSuccess: contactMode === 'endpoint',
     validate: (v) => ({
-      name: v.name.trim() ? undefined : t('form.errName'),
+      name: isName(v.name) ? undefined : t('form.errName'),
       email: isEmail(v.email) ? undefined : t('form.errEmail'),
       phone: v.phone.trim() && !isValidPhone(normalizePhone(v.phone)) ? t('form.errPhone') : undefined,
-      message: v.message.trim() ? undefined : t('form.errMessage'),
+      message: v.message.trim().length >= 10 ? undefined : t('form.errMessage'),
     }),
     submit: async (v) => {
       const label = subjects[subjectValues.indexOf(v.subject as (typeof subjectValues)[number])] ?? v.subject
@@ -70,7 +70,8 @@ export function ContactForm() {
             name="name"
             autoComplete="name"
             value={form.values.name}
-            onChange={(e) => form.setValue('name', e.target.value)}
+            maxLength={60}
+            onChange={(e) => form.setValue('name', cleanName(e.target.value))}
             placeholder={t('form.namePlaceholder')}
             aria-invalid={!!form.errors.name}
             aria-describedby={form.errors.name ? 'contact-name-error' : undefined}
@@ -81,12 +82,11 @@ export function ContactForm() {
             id="contact-email"
             name="email"
             type="email"
-            dir="ltr"
             autoComplete="email"
             inputMode="email"
-            className="text-start"
             value={form.values.email}
-            onChange={(e) => form.setValue('email', e.target.value)}
+            maxLength={120}
+            onChange={(e) => form.setValue('email', e.target.value.replace(/\s/g, ''))}
             placeholder={t('form.emailPlaceholder')}
             aria-invalid={!!form.errors.email}
             aria-describedby={form.errors.email ? 'contact-email-error' : undefined}
@@ -100,12 +100,11 @@ export function ContactForm() {
             id="contact-phone"
             name="phone"
             type="tel"
-            dir="ltr"
             autoComplete="tel"
             inputMode="tel"
-            className="text-start"
             value={form.values.phone}
-            onChange={(e) => form.setValue('phone', e.target.value)}
+            maxLength={20}
+            onChange={(e) => form.setValue('phone', cleanPhone(e.target.value))}
             placeholder={t('form.phonePlaceholder')}
             aria-invalid={!!form.errors.phone}
             aria-describedby={form.errors.phone ? 'contact-phone-error' : undefined}
@@ -136,6 +135,7 @@ export function ContactForm() {
           id="contact-message"
           name="message"
           value={form.values.message}
+          maxLength={1000}
           onChange={(e) => form.setValue('message', e.target.value)}
           placeholder={t('form.messagePlaceholder')}
           aria-invalid={!!form.errors.message}

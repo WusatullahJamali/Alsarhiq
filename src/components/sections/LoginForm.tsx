@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { PasswordInput } from '@/components/ui/password-input'
 import { useLocalizedPath } from '@/hooks/useLang'
 import { useSimpleForm } from '@/hooks/useSimpleForm'
-import { isEmail } from '@/lib/validators'
+import { isEmail, maxPasswordLength } from '@/lib/validators'
 import { login } from '@/lib/auth'
 
 export function LoginForm() {
@@ -31,12 +31,11 @@ export function LoginForm() {
           id="login-email"
           name="email"
           type="email"
-          dir="ltr"
           autoComplete="email"
           inputMode="email"
-          className="text-start"
           value={form.values.email}
-          onChange={(e) => form.setValue('email', e.target.value)}
+          maxLength={120}
+          onChange={(e) => form.setValue('email', e.target.value.replace(/\s/g, ''))}
           aria-invalid={!!form.errors.email}
           aria-describedby={form.errors.email ? 'login-email-error' : undefined}
         />
@@ -49,6 +48,7 @@ export function LoginForm() {
           showLabel={t('fields.show')}
           hideLabel={t('fields.hide')}
           value={form.values.password}
+          maxLength={maxPasswordLength}
           onChange={(e) => form.setValue('password', e.target.value)}
           aria-invalid={!!form.errors.password}
           aria-describedby={form.errors.password ? 'login-password-error' : undefined}

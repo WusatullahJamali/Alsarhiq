@@ -8,12 +8,12 @@ interface PasswordInputProps extends Omit<ComponentProps<'input'>, 'type'> {
   hideLabel: string
 }
 
-/** Password field with a show/hide toggle. Text stays left-to-right so Latin passwords read correctly in Arabic pages. */
+/** Password field with a show/hide toggle. Text follows the page direction. */
 export function PasswordInput({ showLabel, hideLabel, className, ...props }: PasswordInputProps) {
   const [visible, setVisible] = useState(false)
   return (
     <div className="relative">
-      <Input type={visible ? 'text' : 'password'} dir="ltr" className={cn('pe-12 text-start', className)} {...props} />
+      <Input type={visible ? 'text' : 'password'} className={cn('pe-12', className)} {...props} />
       <button
         type="button"
         onClick={() => setVisible((v) => !v)}

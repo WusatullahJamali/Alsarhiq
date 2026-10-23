@@ -28,7 +28,7 @@ export function AuthShell({ title, lead, children, footer, social }: AuthShellPr
   const to = useLocalizedPath()
 
   return (
-    <div className="grid min-h-svh lg:h-svh lg:grid-cols-2 lg:overflow-hidden">
+    <div className="grid min-h-svh lg:h-svh lg:leading-normal lg:grid-cols-2 lg:overflow-hidden">
       <aside className="relative hidden overflow-hidden border-e-[6px] border-gold bg-dark bg-grid text-dark-fg lg:block">
         <div className="relative mx-auto grid h-full w-full max-w-lg grid-rows-[auto_1fr_auto] px-12 py-10">
           <Link to={to()} className="inline-flex w-fit rounded-sm" aria-label={common('logoAlt')}>
@@ -41,18 +41,18 @@ export function AuthShell({ title, lead, children, footer, social }: AuthShellPr
             </p>
             <p className="m-0 max-w-[30em] text-dark-muted">{home('hero.lead')}</p>
           </div>
-          <bdi dir="ltr" className="text-sm font-semibold text-gold">
+          <a href={siteConfig.url} dir="ltr" className="w-fit text-sm font-semibold text-gold hover:underline">
             {siteConfig.domain}
-          </bdi>
+          </a>
         </div>
       </aside>
-      <Container className="flex flex-col py-4 sm:py-6 lg:h-svh lg:overflow-y-auto lg:px-12 lg:py-5">
+      <Container className="flex flex-col py-4 sm:py-6 lg:h-svh lg:overflow-hidden lg:px-12 lg:py-4">
         <div className="flex items-center justify-between gap-3">
           <Logo />
           <LanguageSwitcher />
         </div>
         <div className="flex flex-1 items-center py-6 lg:py-3">
-          <div className="mx-auto grid w-full max-w-md gap-3">
+          <div className="mx-auto grid w-full max-w-md gap-3 lg:[@media(max-height:720px)]:[zoom:0.86]">
             <div className="grid gap-2">
               <Heading as="h1" size="h2">
                 {title}
@@ -61,7 +61,7 @@ export function AuthShell({ title, lead, children, footer, social }: AuthShellPr
             </div>
             {social && <SocialAuth />}
             {children}
-            <p className="m-0 text-xs leading-relaxed text-muted-foreground">{t('note')}</p>
+            <p className="m-0 text-xs leading-relaxed text-muted-foreground lg:[@media(max-height:800px)]:hidden">{t('note')}</p>
             {footer && <div className="border-t border-line pt-4 text-sm">{footer}</div>}
           </div>
         </div>

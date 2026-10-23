@@ -8,6 +8,7 @@ import logo from '@/assets/logo-reversed.svg'
 interface HeroProps {
   eyebrow: string
   domain: string
+  url: string
   logoAlt: string
   fullName: string
   taglineLead: string
@@ -20,14 +21,14 @@ interface HeroProps {
 
 const rise = (n: number) => ({ ['--d' as string]: `${n * 110}ms` })
 
-export function Hero({ eyebrow, domain, logoAlt, fullName, taglineLead, taglineAccent, lead, primary, secondary, scope }: HeroProps) {
+export function Hero({ eyebrow, domain, url, logoAlt, fullName, taglineLead, taglineAccent, lead, primary, secondary, scope }: HeroProps) {
   return (
     <section className="relative overflow-hidden border-b-[6px] border-gold bg-dark bg-grid text-dark-fg">
       <Container className="grid items-center gap-x-14 gap-y-8 py-9 sm:py-14 lg:min-h-[min(40rem,75svh)] lg:grid-cols-[1.15fr_0.85fr]">
         <div className="min-w-0">
           <div className="rise mb-5 flex flex-wrap gap-x-3 gap-y-1 text-xs font-semibold text-gold" style={rise(0)}>
             <span>{eyebrow}</span>
-            <bdi dir="ltr">{domain}</bdi>
+            <a href={url} dir="ltr" className="hover:underline">{domain}</a>
           </div>
           <h1 className="rise m-0 text-[clamp(2.4rem,6.2vw,4.25rem)] leading-[1.12] font-extrabold text-balance" style={rise(1)}>
             {taglineLead} <span className="text-gold">{taglineAccent}</span>

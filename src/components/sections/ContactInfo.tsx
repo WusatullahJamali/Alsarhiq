@@ -81,7 +81,7 @@ export function ContactInfo() {
 
       <div className={cn(card, 'hover:translate-y-0 hover:border-line hover:shadow-card')}>
         <Row label={common('siteLabel')}>
-          <bdi dir="ltr">{siteConfig.domain}</bdi>
+          <a href={siteConfig.url} dir="ltr" className="hover:underline">{siteConfig.domain}</a>
         </Row>
       </div>
 

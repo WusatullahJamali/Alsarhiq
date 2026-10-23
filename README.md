@@ -65,7 +65,7 @@ Nginx:
 
 ```nginx
 server {
-  root /var/www/alsarh/dist;
+  root /var/www/alsarhiq/dist;
   index index.html;
   location / { try_files $uri $uri/ /index.html; }
   location /assets/ { add_header Cache-Control "public, max-age=31536000, immutable"; }

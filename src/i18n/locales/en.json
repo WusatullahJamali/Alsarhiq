@@ -377,8 +377,8 @@
       "messagePlaceholder": "Area, location, number of floors...",
       "submit": "Request a Quote via WhatsApp",
       "submitEndpoint": "Send Request",
-      "errName": "Please enter your name.",
-      "errPhone": "Please enter a valid phone number, for example 07701234567.",
+      "errName": "Please enter your name (letters only).",
+      "errPhone": "Please enter a valid phone number (digits only), for example 07701234567.",
       "ready": "Your request is ready. Tap “Open WhatsApp” to send it, or call us directly. Nothing has been sent yet.",
       "sending": "Sending...",
       "sent": "Your request has been sent. We will contact you soon.",
@@ -389,7 +389,7 @@
       "emailPlaceholder": "name@example.com",
       "optional": "(optional)",
       "errEmail": "Please enter a valid email address.",
-      "errMessage": "Please write a short message."
+      "errMessage": "Please write a message of at least 10 characters."
     },
     "services": [
       "Contracting / construction",
@@ -467,7 +467,9 @@
       "passwordShort": "Password must be at least {{min}} characters.",
       "passwordMismatch": "The passwords do not match.",
       "terms": "Please accept the Terms and the Privacy Policy to continue.",
-      "failed": "Something went wrong. Please try again."
+      "failed": "Something went wrong. Please try again.",
+      "nameInvalid": "Use letters only in the name.",
+      "passwordWeak": "Use at least one letter and one number, and no spaces."
     }
   },
   "legal": {

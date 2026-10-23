@@ -29,6 +29,7 @@ export default function Home() {
       <Hero
         eyebrow={t('hero.eyebrow')}
         domain={siteConfig.domain}
+        url={siteConfig.url}
         logoAlt={common('lockupAlt')}
         fullName={t('hero.title')}
         taglineLead={t('hero.taglineLead')}
