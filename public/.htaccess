@@ -1,0 +1,87 @@
+# Apache config for alsarhiq.com (single-page app). Vite copies this file into dist/ on build.
+
+# ---------- HTTPS + one hostname ----------
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# www -> non-www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# http -> https
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ---------- Static snapshots ----------
+# `npm run build` writes a real HTML file per page (dist/en/services.html ...). Serve it for /en/services so crawlers
+# that do not run JavaScript see the content. Visitors still get the normal app on top.
+# "/" has nothing to show, so it goes to the default language.
+RewriteRule ^$ /en [R=301,L]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# ---------- Unknown URLs ----------
+# There is no catch-all to index.html: a URL without a snapshot or file is a real 404 (no soft 404s).
+RewriteBase /
+</IfModule>
+
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+DirectorySlash Off
+Options -Indexes -MultiViews
+
+# ---------- Security headers ----------
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+Header unset X-Powered-By
+</IfModule>
+ServerSignature Off
+
+# ---------- Compression ----------
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/json
+AddOutputFilterByType DEFLATE application/javascript text/javascript image/svg+xml
+</IfModule>
+
+# ---------- Types ----------
+<IfModule mod_mime.c>
+AddType application/javascript .js .mjs
+AddType image/svg+xml .svg .svgz
+AddType application/manifest+json .webmanifest
+AddDefaultCharset UTF-8
+</IfModule>
+
+# ---------- Caching ----------
+# Built files in /assets have a hash in their name, so they can be cached for a year.
+# index.html must always be re-checked, or users keep an old build after a deploy.
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 week"
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType application/xml "access plus 1 day"
+ExpiresByType text/xml "access plus 1 day"
+ExpiresByType text/plain "access plus 1 day"
+ExpiresByType image/svg+xml "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 month"
+ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(html)$">
+Header set Cache-Control "no-cache, must-revalidate"
+</FilesMatch>
+<If "%{REQUEST_URI} =~ m#^/assets/#">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</If>
+</IfModule>
+
+# ---------- Block hidden and source files ----------
+<FilesMatch "^\.(?!well-known)|\.(map|env|log|md|json)$">
+Require all denied
+</FilesMatch>

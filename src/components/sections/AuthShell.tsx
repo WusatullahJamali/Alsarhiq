@@ -7,8 +7,7 @@ import { SocialAuth } from '@/components/sections/SocialAuth'
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { siteConfig } from '@/config/site'
-import { useLocalizedPath } from '@/hooks/useLang'
-import logo from '@/assets/logo-reversed.svg'
+import { useLocalizedPath, useLogos } from '@/hooks/useLang'
 
 interface AuthShellProps {
   title: string
@@ -26,6 +25,7 @@ export function AuthShell({ title, lead, children, footer, social }: AuthShellPr
   const { t: common } = useTranslation()
   const { t: home } = useTranslation('home')
   const to = useLocalizedPath()
+  const { lockup: logo } = useLogos()
 
   return (
     <div className="grid min-h-svh lg:h-svh lg:leading-normal lg:grid-cols-2 lg:overflow-hidden">

@@ -3,7 +3,7 @@ import { ArrowIcon } from '@/components/ui/arrow-icon'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import type { ScopeChip } from '@/components/sections/ScopeChips'
-import logo from '@/assets/logo-reversed.svg'
+import { useLogos } from '@/hooks/useLang'
 
 interface HeroProps {
   eyebrow: string
@@ -22,6 +22,7 @@ interface HeroProps {
 const rise = (n: number) => ({ ['--d' as string]: `${n * 110}ms` })
 
 export function Hero({ eyebrow, domain, url, logoAlt, fullName, taglineLead, taglineAccent, lead, primary, secondary, scope }: HeroProps) {
+  const { lockup: logo } = useLogos()
   return (
     <section className="relative overflow-hidden border-b-[6px] border-gold bg-dark bg-grid text-dark-fg">
       <Container className="grid items-center gap-x-14 gap-y-8 py-9 sm:py-14 lg:min-h-[min(40rem,75svh)] lg:grid-cols-[1.15fr_0.85fr]">

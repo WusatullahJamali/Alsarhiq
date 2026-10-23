@@ -6,8 +6,7 @@ import { pages } from '@/config/pages'
 import { siteConfig } from '@/config/site'
 import { useServices } from '@/hooks/useContent'
 import { useFormat } from '@/hooks/useFormat'
-import { useLang, useLocalizedPath } from '@/hooks/useLang'
-import logo from '@/assets/logo-reversed.svg'
+import { useLang, useLocalizedPath, useLogos } from '@/hooks/useLang'
 import { FooterColumn, footerLink } from './FooterColumn'
 import { FooterCta } from './FooterCta'
 
@@ -16,6 +15,7 @@ export function Footer() {
   const { t } = useTranslation()
   const { lang } = useLang()
   const to = useLocalizedPath()
+  const { lockup: logo } = useLogos()
   const { year } = useFormat()
   const { pathname } = useLocation()
   const services = useServices()

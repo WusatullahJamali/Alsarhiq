@@ -13,8 +13,7 @@ export default function NotFound() {
 
   return (
     <>
-      <Seo title={t('notFound.title')} description={t('notFound.text')} />
-      <meta name="robots" content="noindex" />
+      <Seo title={t('notFound.title')} description={t('notFound.text')} noindex />
       <Section containerClassName="grid justify-items-start gap-4 py-12">
         <span className="text-display font-extrabold text-gold-text">{t('notFound.code')}</span>
         <Heading as="h1" size="h1">

@@ -13,7 +13,7 @@ export function MainLayout() {
   useDirection()
 
   return (
-    <div className="flex min-h-svh flex-col max-[700px]:pb-19">
+    <div className="flex min-h-svh flex-col max-[700px]:pb-15">
       <SkipLink />
       <Header />
       <main id="main" tabIndex={-1} className="flex-1 outline-none">

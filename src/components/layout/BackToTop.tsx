@@ -20,7 +20,7 @@ export function BackToTop() {
       tabIndex={visible ? 0 : -1}
       aria-hidden={!visible}
       className={cn(
-        'fixed right-4 bottom-6 z-30 grid size-12 place-items-center rounded-full border border-gold bg-brand text-white shadow-menu transition-[opacity,transform,background-color] duration-300 ease-soft hover:bg-brand-hover max-[700px]:bottom-24',
+        'fixed right-4 bottom-6 z-30 grid size-12 place-items-center rounded-full border border-gold bg-brand text-white shadow-menu transition-[opacity,transform,background-color] duration-300 ease-soft hover:bg-brand-hover max-[700px]:bottom-20',
         visible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-3 opacity-0',
       )}
     >
