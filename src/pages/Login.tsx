@@ -13,6 +13,7 @@ export default function Login() {
     <>
       <Seo title={t('login.title')} description={t('login.lead')} noindex />
       <AuthShell
+        social
         title={t('login.title')}
         lead={t('login.lead')}
         footer={

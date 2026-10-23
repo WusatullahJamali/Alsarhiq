@@ -32,3 +32,10 @@ export async function requestPasswordReset(input: ForgotInput): Promise<void> {
   void input
   await pause()
 }
+
+export type SocialProvider = 'google' | 'apple'
+
+export async function socialAuth(provider: SocialProvider): Promise<void> {
+  void provider
+  await pause()
+}

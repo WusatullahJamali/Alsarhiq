@@ -3,6 +3,7 @@ import { createBrowserRouter, Navigate, type RouteObject } from 'react-router'
 import { defaultLocale } from '@/i18n'
 import { pages, type PageKey } from '@/config/pages'
 import { AuthLayout } from '@/layouts/AuthLayout'
+import { RouteError } from '@/components/layout/RouteError'
 import { LangGate } from '@/layouts/LangGate'
 import { MainLayout } from '@/layouts/MainLayout'
 
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
   {
     path: '/:lang',
     element: <LangGate />,
+    errorElement: <RouteError />,
     children: [
       { element: <MainLayout />, children: [...routesFor('main'), { path: '*', element: <NotFound /> }] },
       { element: <AuthLayout />, children: routesFor('auth') },

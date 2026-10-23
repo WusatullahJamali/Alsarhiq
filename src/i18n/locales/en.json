@@ -43,7 +43,7 @@
       "copyright": "© {{year}} Al-Sarh Al-Mutakamel Company for General Trading, General Contracting and Real Estate Investments LLC",
       "legal": "Prices, schedules and warranties are set in the signed contract for each project. Nothing on this website is a binding offer.",
       "quickLinks": "Quick links",
-      "about": "Integrated general contracting, trading and real estate investment for government, healthcare, industrial, commercial and residential projects in Iraq. We design, build, equip and maintain under one management, with scope, schedule and cost set out in the contract.",
+      "about": "General contracting, trading and real estate investment across Iraq, under one management.",
       "email": "Email",
       "address": "Address",
       "website": "Website",
@@ -56,6 +56,11 @@
       "title": "Page not found",
       "text": "The page you are looking for does not exist or has been moved.",
       "back": "Back to home"
+    },
+    "routeError": {
+      "title": "Something went wrong",
+      "text": "The page could not be loaded. Check your connection and try again.",
+      "reload": "Reload page"
     }
   },
   "home": {
@@ -72,7 +77,7 @@
     },
     "cta": {
       "title": "Ready to start your project?",
-      "text": "Send us your project details and we will come back with a written, itemized quotation."
+      "text": "Send us your project details and we will come back with a written, itemized quotation, usually within one working day."
     }
   },
   "services": {
@@ -89,7 +94,9 @@
           "Homes, villas and residential compounds",
           "Commercial buildings, shops and warehouses",
           "Reinforced concrete structures and full finishing",
-          "Renovation and rehabilitation of existing buildings"
+          "Renovation and rehabilitation of existing buildings",
+          "Site supervision by licensed engineers",
+          "Handover with as-built drawings"
         ]
       },
       {
@@ -100,7 +107,9 @@
           "Rebar, cement and bricks",
           "Insulation and finishing materials",
           "WPC panels for facades and interiors",
-          "Deliveries scheduled to the project programme"
+          "Deliveries scheduled to the project programme",
+          "Quality checked on delivery",
+          "Bulk pricing for contractors"
         ]
       },
       {
@@ -111,7 +120,9 @@
           "Land acquisition and development",
           "Units built for sale or lease",
           "Feasibility studies before purchase",
-          "Management of leased properties"
+          "Management of leased properties",
+          "Leasing and tenant coordination",
+          "Resale and exit planning"
         ]
       }
     ]
@@ -199,6 +210,30 @@
           "Mobile apps and dashboards",
           "Hosting and technical support"
         ]
+      },
+      {
+        "tag": "Education",
+        "title": "Schools & Universities",
+        "text": "Classrooms, laboratories, halls and campus facilities built to the education authority’s standards.",
+        "list": [
+          "School and kindergarten buildings",
+          "University halls and laboratories",
+          "Sports courts and playgrounds",
+          "Furniture and teaching equipment",
+          "Maintenance during the school year"
+        ]
+      },
+      {
+        "tag": "Energy & Utilities",
+        "title": "Power, Water & Utilities",
+        "text": "Civil works and supply for utility networks, stations and service buildings.",
+        "list": [
+          "Substation and pump-station buildings",
+          "Water and sewer line works",
+          "Generators and switchgear supply",
+          "Fencing and site security",
+          "Operation and maintenance support"
+        ]
       }
     ]
   },
@@ -211,23 +246,23 @@
     "steps": [
       {
         "title": "Study & Costing",
-        "text": "Site visit, soil testing where required, and a detailed bill of quantities with a written quotation."
+        "text": "Site visit, soil testing where required, and a detailed bill of quantities with a written quotation. You approve the scope and price before any work starts."
       },
       {
         "title": "Design & Permits",
-        "text": "Architectural and structural drawings, and handling of the building-permit process."
+        "text": "Architectural and structural drawings, and handling of the building-permit process. Drawings are reviewed with you and revised until approved."
       },
       {
         "title": "Foundations & Structure",
-        "text": "Excavation, foundations and concrete, with rebar inspected before every pour."
+        "text": "Excavation, foundations and concrete, with rebar inspected before every pour. Progress photos are shared after each pour."
       },
       {
         "title": "MEP & Finishes",
-        "text": "Electrical and plumbing before plastering, then flooring and facades."
+        "text": "Electrical and plumbing before plastering, then flooring and facades. Each trade is checked against the drawings before it is closed."
       },
       {
         "title": "Inspection & Handover",
-        "text": "A final walkthrough with you, then handover under the contract terms, including any agreed warranty period."
+        "text": "A final walkthrough with you, then handover under the contract terms, including any agreed warranty period. Snag items are fixed and signed off before final payment."
       }
     ]
   },
@@ -252,6 +287,14 @@
       {
         "title": "Regular progress reports",
         "text": "Photos and progress updates at the frequency agreed in the contract."
+      },
+      {
+        "title": "One company, one responsibility",
+        "text": "Design, supply, construction and maintenance sit under one management, so there is a single point to call when something needs to change."
+      },
+      {
+        "title": "Local market knowledge",
+        "text": "We know Iraqi suppliers, authorities and site conditions, and plan schedules and budgets around them rather than around assumptions."
       }
     ]
   },
@@ -296,6 +339,18 @@
       {
         "role": "Luxury Apparel",
         "text": "A luxury menswear house founded in San Francisco in 1865, offering tailored suits, shirts and refined clothing in fabrics from leading Italian mills."
+      },
+      {
+        "role": "Business Services",
+        "text": "A corporate business website presenting the company’s services, profile and the ways clients can get in touch."
+      },
+      {
+        "role": "Real Estate",
+        "text": "A real estate website listing properties for sale and rent, with search by location and type and a direct inquiry to the agent."
+      },
+      {
+        "role": "Technology & SaaS",
+        "text": "A technology group delivering software across many stacks: SaaS products, web and mobile applications, cloud infrastructure and custom development for companies."
       }
     ]
   },
@@ -369,6 +424,12 @@
       "fullName": "Full name",
       "show": "Show password",
       "hide": "Hide password"
+    },
+    "social": {
+      "google": "Google",
+      "apple": "Apple",
+      "or": "or",
+      "success": "Social sign-in will work once accounts are connected."
     },
     "sending": "Please wait...",
     "note": "Accounts are not connected to a server yet. Your details are not stored.",

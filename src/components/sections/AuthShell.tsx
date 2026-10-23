@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher'
 import { Logo } from '@/components/layout/Logo'
+import { SocialAuth } from '@/components/sections/SocialAuth'
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import logo from '@/assets/logo-reversed.svg'
@@ -12,10 +13,12 @@ interface AuthShellProps {
   children: ReactNode
   /** Links under the form (switch to sign up, back to sign in ...). */
   footer?: ReactNode
+  /** Show Google / Apple buttons above the form. */
+  social?: boolean
 }
 
 /** Bare login-flow page. Desktop: brand panel (template message) beside the form. Phones: form only, with logo and language on top. */
-export function AuthShell({ title, lead, children, footer }: AuthShellProps) {
+export function AuthShell({ title, lead, children, footer, social }: AuthShellProps) {
   const { t } = useTranslation('auth')
   const { t: common } = useTranslation()
   const { t: home } = useTranslation('home')
@@ -44,6 +47,7 @@ export function AuthShell({ title, lead, children, footer }: AuthShellProps) {
               </Heading>
               <p className="m-0 text-muted-foreground">{lead}</p>
             </div>
+            {social && <SocialAuth />}
             {children}
             <p className="m-0 text-xs leading-relaxed text-muted-foreground">{t('note')}</p>
             {footer && <div className="border-t border-line pt-4 text-sm">{footer}</div>}
