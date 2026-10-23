@@ -1,0 +1,503 @@
+{
+  "common": {
+    "skip": "Skip to content",
+    "logoAlt": "Al-Sarh Al-Mutakamel, back to top",
+    "lockupAlt": "Al-Sarh Al-Mutakamel logo",
+    "brand": {
+      "name": "Al-Sarh Al-Mutakamel"
+    },
+    "nav": {
+      "aria": "Main navigation",
+      "home": "Home",
+      "services": "Services",
+      "sectors": "Sectors",
+      "process": "How We Work",
+      "about": "Why Us",
+      "partners": "Partners",
+      "contact": "Contact Us",
+      "menu": "Menu",
+      "close": "Close",
+      "login": "Sign in",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    },
+    "lang": {
+      "group": "Language"
+    },
+    "call": {
+      "aria": "Call 07706699333",
+      "now": "Call now",
+      "short": "Call",
+      "label": "Phone"
+    },
+    "cta": {
+      "quote": "Request a Quote",
+      "services": "Explore Our Services",
+      "learnMore": "Learn more",
+      "contact": "Contact Us"
+    },
+    "newTab": "(opens in a new tab)",
+    "country": "Iraq",
+    "siteLabel": "Website:",
+    "footer": {
+      "copyright": "© {{year}} Al-Sarh Al-Mutakamel Company for General Trading, General Contracting and Real Estate Investments LLC",
+      "legal": "Prices, schedules and warranties are set in the signed contract for each project. Nothing on this website is a binding offer.",
+      "quickLinks": "Quick links",
+      "about": "Integrated general contracting, trading and real estate investment for government, healthcare, industrial, commercial and residential projects in Iraq. We design, build, equip and maintain under one management, with scope, schedule and cost set out in the contract.",
+      "email": "Email",
+      "address": "Address",
+      "website": "Website",
+      "backToTop": "Back to top"
+    },
+    "fullName": "Al-Sarh Al-Mutakamel Company for General Trading, General Contracting and Real Estate Investments LLC",
+    "tagline": "Building with Confidence. Investing with Vision.",
+    "notFound": {
+      "code": "404",
+      "title": "Page not found",
+      "text": "The page you are looking for does not exist or has been moved.",
+      "back": "Back to home"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Al-Sarh Al-Mutakamel",
+      "description": "Al-Sarh Al-Mutakamel: general contracting, trading and supply, and real estate investment for government, healthcare, industrial, commercial and residential projects in Iraq."
+    },
+    "hero": {
+      "eyebrow": "Iraqi company · Limited Liability",
+      "title": "Al-Sarh Al-Mutakamel Company for General Trading, General Contracting and Real Estate Investments LLC",
+      "lead": "Integrated general contracting, trading and real estate investment for government, healthcare, industrial, commercial and residential projects in Iraq. We design, build, equip and maintain under one management, with scope, schedule and cost set out in the contract.",
+      "taglineLead": "Building with Confidence.",
+      "taglineAccent": "Investing with Vision."
+    },
+    "cta": {
+      "title": "Ready to start your project?",
+      "text": "Send us your project details and we will come back with a written, itemized quotation."
+    }
+  },
+  "services": {
+    "header": {
+      "title": "Three Services. One Company.",
+      "lead": "Our name says what we do: trading, contracting and real estate investment. With all three in one company, there are fewer intermediaries, and supply and construction are easier to coordinate."
+    },
+    "items": [
+      {
+        "kicker": "General Contracting",
+        "title": "We Build",
+        "text": "Residential and commercial projects delivered under direct engineering supervision at every stage.",
+        "list": [
+          "Homes, villas and residential compounds",
+          "Commercial buildings, shops and warehouses",
+          "Reinforced concrete structures and full finishing",
+          "Renovation and rehabilitation of existing buildings"
+        ]
+      },
+      {
+        "kicker": "General Trading & Supply",
+        "title": "We Supply",
+        "text": "Construction and finishing materials supplied to projects and contractors in project quantities.",
+        "list": [
+          "Rebar, cement and bricks",
+          "Insulation and finishing materials",
+          "WPC panels for facades and interiors",
+          "Deliveries scheduled to the project programme"
+        ]
+      },
+      {
+        "kicker": "Real Estate Investment",
+        "title": "We Invest",
+        "text": "Developing and managing land and property for sale or lease, based on a feasibility study for each project.",
+        "list": [
+          "Land acquisition and development",
+          "Units built for sale or lease",
+          "Feasibility studies before purchase",
+          "Management of leased properties"
+        ]
+      }
+    ]
+  },
+  "sectors": {
+    "header": {
+      "title": "Sectors We Serve",
+      "lead": "We take on projects from concept to operation: we design, build, equip, supply and maintain. One company coordinating every stage, in both the public and private sectors."
+    },
+    "scopeAria": "Scope of service",
+    "scope": [
+      "Design",
+      "Construction",
+      "Fit-out & Furnishing",
+      "Supply",
+      "Operation & Maintenance"
+    ],
+    "items": [
+      {
+        "tag": "Healthcare",
+        "title": "Hospitals & Health Centers",
+        "text": "Construction, rehabilitation and fit-out of healthcare facilities to project specifications and the requirements of the relevant authorities.",
+        "list": [
+          "Hospitals, health centers and clinics",
+          "Operating theaters and intensive care units",
+          "Medical gas networks and clean-room HVAC",
+          "Supply of medical equipment and furniture",
+          "Scheduled maintenance contracts"
+        ]
+      },
+      {
+        "tag": "Correctional Facilities",
+        "title": "Prisons & Rehabilitation Centers",
+        "text": "Secure facilities built to the security specifications set by the contracting authority.",
+        "list": [
+          "Construction and rehabilitation of prisons and detention centers",
+          "Perimeter walls, gates and checkpoints",
+          "Surveillance and access-control systems",
+          "Kitchens, laundries and service facilities",
+          "Supply of equipment and provisions"
+        ]
+      },
+      {
+        "tag": "Government",
+        "title": "Ministries & Government Departments",
+        "text": "Delivery of government projects and tenders, from construction to complete fit-out.",
+        "list": [
+          "Administrative buildings, schools and service centers",
+          "Infrastructure and road projects",
+          "Furnishing and fit-out of government offices",
+          "Materials and equipment under supply contracts",
+          "Preparation of bid documents"
+        ]
+      },
+      {
+        "tag": "Industrial",
+        "title": "Factories & Industrial Facilities",
+        "text": "Industrial facilities with construction planned to reduce operational downtime.",
+        "list": [
+          "Factories, warehouses and steel hangars",
+          "Industrial flooring and utility lines",
+          "Power stations and generators",
+          "Equipment and spare parts supply"
+        ]
+      },
+      {
+        "tag": "Commercial & Residential",
+        "title": "Compounds & Commercial Buildings",
+        "text": "Residential and commercial developments for sale, investment or lease.",
+        "list": [
+          "Residential compounds and villas",
+          "Malls, shops and offices",
+          "Hotels and restaurants",
+          "Property management"
+        ]
+      },
+      {
+        "tag": "Digital Solutions",
+        "title": "Digital Platforms for Government & Business",
+        "text": "Digital systems that move paper-based work onto one clear platform.",
+        "list": [
+          "E-government service platforms",
+          "Project and contracting management systems",
+          "Inventory and procurement systems",
+          "Mobile apps and dashboards",
+          "Hosting and technical support"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "header": {
+      "title": "From Blueprint to Handover",
+      "lead": "Every project passes through five stages. We do not move to the next stage until the previous one is inspected and accepted, and we report progress to you at each stage."
+    },
+    "stage": "Stage {{n}}",
+    "steps": [
+      {
+        "title": "Study & Costing",
+        "text": "Site visit, soil testing where required, and a detailed bill of quantities with a written quotation."
+      },
+      {
+        "title": "Design & Permits",
+        "text": "Architectural and structural drawings, and handling of the building-permit process."
+      },
+      {
+        "title": "Foundations & Structure",
+        "text": "Excavation, foundations and concrete, with rebar inspected before every pour."
+      },
+      {
+        "title": "MEP & Finishes",
+        "text": "Electrical and plumbing before plastering, then flooring and facades."
+      },
+      {
+        "title": "Inspection & Handover",
+        "text": "A final walkthrough with you, then handover under the contract terms, including any agreed warranty period."
+      }
+    ]
+  },
+  "about": {
+    "header": {
+      "title": "Why Al-Sarh Al-Mutakamel?",
+      "lead": "Our management’s experience in construction, project management and real estate finance, applied to the Iraqi market."
+    },
+    "items": [
+      {
+        "title": "Written, itemized quotations",
+        "text": "A detailed bill of quantities before signing. Any change to price or scope goes through a written change order under the contract."
+      },
+      {
+        "title": "Direct materials supply",
+        "text": "Sourcing materials through our own trading division gives us closer control over quality and delivery schedules."
+      },
+      {
+        "title": "Inspection before every stage",
+        "text": "Our procedures require work to be inspected before it is covered, from foundation rebar to in-wall services."
+      },
+      {
+        "title": "Regular progress reports",
+        "text": "Photos and progress updates at the frequency agreed in the contract."
+      }
+    ]
+  },
+  "partners": {
+    "header": {
+      "title": "Our Partners & Strategic Relationships",
+      "lead": "We work with companies specializing in logistics, international trade, technology and AI. Each is an independent company, and details of each relationship are available on request."
+    },
+    "items": [
+      {
+        "role": "Logistics",
+        "text": "A delivery and logistics network in Iraq, handling orders for restaurants and online stores with live tracking for every shipment."
+      },
+      {
+        "role": "International Trade",
+        "text": "A business-to-business platform connecting manufacturers, logistics providers and financial services: verified suppliers, quotes and digital contracts, freight booking, tracking and customs clearance."
+      },
+      {
+        "role": "E-commerce & Import",
+        "text": "An Iraqi marketplace connecting factories in Turkey and China with wholesale buyers, resellers and consumers, with escrow until delivery is confirmed and delivery through the JayakHub network."
+      },
+      {
+        "role": "Online Retail",
+        "text": "An online store for electronics and accessories, including computers, phones, smartwatches, cameras and game consoles."
+      },
+      {
+        "role": "AI Business Automation",
+        "text": "An automation platform that replaces repetitive manual work with AI agents: lead response, follow-up, scheduling and intake on one connected system."
+      },
+      {
+        "role": "Real Estate AI",
+        "text": "An AI assistant that answers new real estate inquiries within about a minute by text and chat, and qualifies each lead before handing it to the right agent."
+      },
+      {
+        "role": "Property Operations",
+        "text": "A field-operations system for short-term rental owners: cleanings, inspections, damage reports and supplies, verified by photo and location before each guest arrives."
+      },
+      {
+        "role": "Family Digital Safety",
+        "text": "A parental-controls suite protecting children across phones, computers and the browser: web filtering, app blocking, screen-time limits and location."
+      },
+      {
+        "role": "Luxury Apparel",
+        "text": "A luxury menswear house founded in San Francisco in 1865, offering tailored suits, shirts and refined clothing in fabrics from leading Italian mills."
+      }
+    ]
+  },
+  "contact": {
+    "header": {
+      "title": "Contact Us",
+      "lead": "Call us directly, or prepare your project details and send them by WhatsApp. We will contact you to arrange next steps."
+    },
+    "copy": {
+      "label": "Copy number",
+      "done": "Copied",
+      "selected": "Number selected, copy it manually"
+    },
+    "form": {
+      "title": "Quote Request",
+      "note": "This website does not send any data. The button prepares a WhatsApp message with your details for you to send.",
+      "noteEndpoint": "Details sent through this form go to the Al-Sarh Al-Mutakamel team and are used only to respond to your request.",
+      "name": "Name",
+      "namePlaceholder": "Full name",
+      "phone": "Phone number",
+      "phonePlaceholder": "07xx xxx xxxx",
+      "service": "Service type",
+      "message": "Project details",
+      "messagePlaceholder": "Area, location, number of floors...",
+      "submit": "Request a Quote via WhatsApp",
+      "submitEndpoint": "Send Request",
+      "errName": "Please enter your name.",
+      "errPhone": "Please enter a valid phone number, for example 07701234567.",
+      "ready": "Your request is ready. Tap “Open WhatsApp” to send it, or call us directly. Nothing has been sent yet.",
+      "sending": "Sending...",
+      "sent": "Your request has been sent. We will contact you soon.",
+      "sendFail": "Your request could not be sent. Please call us on {{phone}}.",
+      "openWa": "Open WhatsApp",
+      "subject": "Subject",
+      "email": "Email",
+      "emailPlaceholder": "name@example.com",
+      "optional": "(optional)",
+      "errEmail": "Please enter a valid email address.",
+      "errMessage": "Please write a short message."
+    },
+    "services": [
+      "Contracting / construction",
+      "Materials supply",
+      "Real estate investment",
+      "Hospital / health center",
+      "Prison / correctional facility",
+      "Government project / tender",
+      "Factory / industrial facility",
+      "Digital platform / system"
+    ],
+    "wa": {
+      "intro": "Quote request - Al-Sarh Al-Mutakamel",
+      "name": "Name",
+      "phone": "Phone",
+      "service": "Service",
+      "message": "Details",
+      "email": "Email"
+    },
+    "info": {
+      "title": "Contact details",
+      "call": "Call us",
+      "whatsapp": "WhatsApp",
+      "hours": "Working hours"
+    }
+  },
+  "auth": {
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "fullName": "Full name",
+      "show": "Show password",
+      "hide": "Hide password"
+    },
+    "sending": "Please wait...",
+    "note": "Accounts are not connected to a server yet. Your details are not stored.",
+    "login": {
+      "title": "Sign in",
+      "lead": "Enter your details to access your account.",
+      "remember": "Remember me",
+      "forgot": "Forgot password?",
+      "submit": "Sign in",
+      "noAccount": "No account yet?",
+      "toSignup": "Create one",
+      "success": "Your details were accepted. Sign-in will work once accounts are connected."
+    },
+    "signup": {
+      "title": "Create an account",
+      "lead": "Set up your account in a minute.",
+      "submit": "Create account",
+      "haveAccount": "Already have an account?",
+      "toLogin": "Sign in",
+      "agree": "I agree to the <terms>Terms of Use</terms> and the <privacy>Privacy Policy</privacy>.",
+      "success": "Your details were accepted. Your account will be created once accounts are connected."
+    },
+    "forgot": {
+      "title": "Reset your password",
+      "lead": "Enter your email and we will send you a link to reset your password.",
+      "submit": "Send reset link",
+      "back": "Back to sign in",
+      "success": "If this email is registered, a reset link will be sent to it."
+    },
+    "errors": {
+      "name": "Please enter your name.",
+      "emailRequired": "Please enter your email.",
+      "emailInvalid": "Please enter a valid email address.",
+      "passwordRequired": "Please enter your password.",
+      "passwordShort": "Password must be at least {{min}} characters.",
+      "passwordMismatch": "The passwords do not match.",
+      "terms": "Please accept the Terms and the Privacy Policy to continue.",
+      "failed": "Something went wrong. Please try again."
+    }
+  },
+  "legal": {
+    "updated": "Last updated",
+    "toc": "On this page",
+    "privacy": {
+      "title": "Privacy Policy",
+      "lead": "What this website stores and how requests you send us are used.",
+      "sections": [
+        {
+          "id": "storage",
+          "title": "What this website stores",
+          "body": [
+            "This website saves only your language choice in your browser. It does not store the details of the request form and does not send them; they go to WhatsApp only when you choose to send them yourself."
+          ]
+        },
+        {
+          "id": "requests",
+          "title": "Requests you send us",
+          "body": [
+            "Details you enter in the contact form are used only to respond to your request.",
+            "[PLACEHOLDER: confirm how and where requests are received and how long they are kept.]"
+          ]
+        },
+        {
+          "id": "accounts",
+          "title": "Accounts",
+          "body": [
+            "Sign-in and registration are not connected to a server yet.",
+            "[PLACEHOLDER: describe how account data is handled once accounts are enabled.]"
+          ]
+        },
+        {
+          "id": "links",
+          "title": "Links to other websites",
+          "body": [
+            "Our partners’ websites are separate sites with their own policies."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "Questions",
+          "body": [
+            "[PLACEHOLDER: privacy contact name and email.]"
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "lead": "The basic terms for using this website and requesting quotations.",
+      "sections": [
+        {
+          "id": "information",
+          "title": "Information on this website",
+          "body": [
+            "Prices, schedules and warranties are set in the signed contract for each project. Nothing on this website is a binding offer."
+          ]
+        },
+        {
+          "id": "quotations",
+          "title": "Quotations and contracts",
+          "body": [
+            "A quotation is prepared in writing after we review your project. Work starts under a signed contract.",
+            "[PLACEHOLDER: governing law and place of jurisdiction.]"
+          ]
+        },
+        {
+          "id": "use",
+          "title": "Using the website",
+          "body": [
+            "Please use this website lawfully and do not misuse its forms.",
+            "[PLACEHOLDER: acceptable-use terms, to be reviewed by the company’s legal adviser.]"
+          ]
+        },
+        {
+          "id": "partners",
+          "title": "Partner companies",
+          "body": [
+            "Each partner company is an independent company; details of each relationship are agreed separately."
+          ]
+        },
+        {
+          "id": "changes",
+          "title": "Changes to these terms",
+          "body": [
+            "These terms may be updated from time to time.",
+            "[PLACEHOLDER: how changes are announced.]"
+          ]
+        }
+      ]
+    }
+  }
+}

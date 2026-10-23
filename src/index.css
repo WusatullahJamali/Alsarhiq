@@ -1,0 +1,256 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/cairo";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Design tokens from the Al-Sarh template. Single source of truth: Tailwind and shadcn read these. */
+:root {
+  /* brand */
+  --brand: #0b4d3c;
+  --brand-hover: #083a2d;
+  --gold: #c9a24a;
+  --gold-hover: #d9b866;
+  --gold-text: #7a5a1c;
+  --gold-ink: #10231b;
+
+  /* surfaces + text */
+  --paper: #ffffff;
+  --bg: #fbf8f0;
+  --fg: #13261f;
+  --muted: #5a5d52;
+  --line: #e6dfcf;
+  --line-2: #d4cbb6;
+
+  /* on dark (brand) surfaces */
+  --dark: #0b4d3c;
+  --dark-fg: #ffffff;
+  --dark-muted: #c3d3cb;
+  --dark-soft: #dce7e1;
+  --dark-line: rgb(255 255 255 / 0.14);
+
+  /* states */
+  --ok: #9fe3b4;
+  --err: #ffb8ac;
+  --err-light: #b42318;
+
+  /* type scale */
+  --fs-display: clamp(1.45rem, 3.2vw, 2rem);
+  --fs-h1: clamp(1.75rem, 4vw, 2.5rem);
+  --fs-h2: clamp(1.75rem, 4vw, 2.5rem);
+  --fs-h3: 1.55rem;
+  --fs-h4: 1.25rem;
+  --fs-h5: 1.12rem;
+  --fs-lead: clamp(1rem, 2.2vw, 1.25rem);
+  --fs-body: 1.0625rem;
+  --fs-sm: 0.95rem;
+  --fs-xs: 0.85rem;
+
+  /* spacing + shape */
+  --section-y: 5rem;
+  --section-y-sm: 3.5rem;
+  --container: 71.25rem;
+  --gutter: 1.25rem;
+  --radius: 0.5rem;
+  --shadow-menu: 0 12px 24px rgb(11 77 60 / 0.1);
+  --shadow-bar: 0 -8px 20px rgb(11 77 60 / 0.1);
+  --header-h: 5rem;
+  --header-h-sm: 4rem;
+  --shadow-card: 0 1px 2px rgb(11 77 60 / 0.05);
+  --shadow-card-hover: 0 8px 20px rgb(11 77 60 / 0.1);
+  --shadow-header: 0 4px 14px rgb(11 77 60 / 0.08);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 200ms;
+  --dur-enter: 600ms;
+  --tint: color-mix(in srgb, var(--brand) 7%, var(--bg));
+}
+
+
+@theme inline {
+  --font-sans: "Cairo Variable", Tahoma, "Segoe UI", sans-serif;
+  --font-heading: var(--font-sans);
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+  --color-gold-text: var(--gold-text);
+  --color-gold-ink: var(--gold-ink);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-dark: var(--dark);
+  --color-dark-fg: var(--dark-fg);
+  --color-dark-muted: var(--dark-muted);
+  --color-dark-soft: var(--dark-soft);
+  --color-dark-line: var(--dark-line);
+  --color-ok: var(--ok);
+  --color-err: var(--err);
+  --color-err-light: var(--err-light);
+
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-card: var(--paper);
+  --color-card-foreground: var(--fg);
+  --color-popover: var(--paper);
+  --color-popover-foreground: var(--fg);
+  --color-primary: var(--brand);
+  --color-primary-foreground: var(--dark-fg);
+  --color-secondary: var(--line);
+  --color-secondary-foreground: var(--fg);
+  --color-muted: var(--line);
+  --color-muted-foreground: var(--muted);
+  --color-accent: var(--line);
+  --color-accent-foreground: var(--fg);
+  --color-destructive: var(--err-light);
+  --color-border: var(--line);
+  --color-input: var(--line-2);
+  --color-ring: var(--gold);
+
+  --text-display: var(--fs-display);
+  --text-h1: var(--fs-h1);
+  --text-h2: var(--fs-h2);
+  --text-h3: var(--fs-h3);
+  --text-h4: var(--fs-h4);
+  --text-h5: var(--fs-h5);
+  --text-lead: var(--fs-lead);
+  --text-body: var(--fs-body);
+  --text-sm: var(--fs-sm);
+  --text-xs: var(--fs-xs);
+
+  --container-site: var(--container);
+  --spacing-section: var(--section-y);
+  --spacing-section-sm: var(--section-y-sm);
+  --spacing-gutter: var(--gutter);
+  --spacing-header: var(--header-h);
+
+  --radius-sm: calc(var(--radius) * 0.75);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+
+  --shadow-menu: var(--shadow-menu);
+  --shadow-bar: var(--shadow-bar);
+
+  --breakpoint-nav: 75rem;
+  --color-tint: var(--tint);
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
+  --shadow-header: var(--shadow-header);
+  --spacing-header-sm: var(--header-h-sm);
+  --ease-soft: var(--ease);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    scroll-padding-top: var(--header-h);
+    overflow-anchor: none;
+  }
+  body {
+    @apply bg-background text-foreground text-body leading-[1.75];
+    margin: 0;
+    overflow-anchor: none;
+  }
+  html[lang="en"] body {
+    line-height: 1.6;
+  }
+  html[lang="ar"] body {
+    line-height: 1.9;
+  }
+  :focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  img,
+  svg {
+    max-width: 100%;
+  }
+  [hidden] {
+    display: none !important;
+  }
+}
+
+/* Arabic needs taller lines than Latin; unlayered so it beats utility classes like leading-tight / leading-none. */
+html[lang="ar"] :is(h1, h2, h3, h4, h5, h6) {
+  line-height: 1.5;
+}
+html[lang="ar"] :is(.leading-none, .leading-tight, .leading-snug) {
+  line-height: 1.5;
+}
+
+/* Motion: transform + opacity only, one easing. Everything switches off under reduced motion. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes marquee {
+  to { transform: translate3d(-50%, 0, 0); }
+}
+@keyframes marquee-rtl {
+  to { transform: translate3d(50%, 0, 0); }
+}
+
+@utility rise {
+  animation: rise 650ms var(--ease) both;
+  animation-delay: var(--d, 0ms);
+}
+
+/* Hidden only when JS is running (the .js class is set in index.html); otherwise content is simply visible. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--dur-enter) var(--ease), transform var(--dur-enter) var(--ease);
+  transition-delay: var(--d, 0ms);
+}
+.js .reveal[data-in] {
+  opacity: 1;
+  transform: none;
+}
+
+.marquee {
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track {
+  display: flex;
+  will-change: transform;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+[dir="rtl"] .marquee-track {
+  animation-name: marquee-rtl;
+}
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  .js .reveal,
+  .js .reveal[data-in] {
+    opacity: 1;
+    transform: none;
+  }
+  .marquee {
+    mask-image: none;
+  }
+  .marquee-track {
+    width: auto;
+    flex-wrap: wrap;
+  }
+  .marquee-dup {
+    display: none;
+  }
+}
