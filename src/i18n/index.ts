@@ -11,7 +11,7 @@ export const rtlLocales: readonly Locale[] = ['ar']
 /** Native names for the switcher; ar-IQ keeps Arabic-Indic digits like the template. */
 export const localeMeta: Record<Locale, { label: string; short: string; intl: string; ogLocale: string }> = {
   en: { label: 'English', short: 'EN', intl: 'en', ogLocale: 'en_US' },
-  ar: { label: 'العربية', short: 'ع', intl: 'ar-IQ', ogLocale: 'ar_IQ' },
+  ar: { label: 'العربية', short: 'عربي', intl: 'ar-IQ', ogLocale: 'ar_IQ' },
 }
 
 export const isLocale = (value: string | undefined): value is Locale => locales.includes(value as Locale)

@@ -26,8 +26,8 @@ export function Header() {
       <div aria-hidden="true" className="h-header" />
       <header
         className={cn(
-          'fixed inset-x-0 top-0 z-30 border-b transition-[height,background-color,box-shadow,border-color] duration-300 ease-soft',
-          scrolled ? 'h-header-sm border-line bg-paper shadow-header' : 'h-header border-transparent bg-background',
+          'fixed inset-x-0 top-0 z-30 border-b bg-background transition-[height,box-shadow,border-color] duration-300 ease-soft',
+          scrolled ? 'h-header-sm border-line shadow-header' : 'h-header border-transparent',
         )}
       >
         <Container className="flex h-full items-center justify-between gap-3 nav:grid nav:grid-cols-[1fr_auto_1fr]">

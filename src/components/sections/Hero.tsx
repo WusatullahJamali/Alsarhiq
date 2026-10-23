@@ -3,7 +3,6 @@ import { ArrowIcon } from '@/components/ui/arrow-icon'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import type { ScopeChip } from '@/components/sections/ScopeChips'
-import { cn } from '@/lib/utils'
 import logo from '@/assets/logo-reversed.svg'
 
 interface HeroProps {
@@ -52,9 +51,14 @@ export function Hero({ eyebrow, domain, logoAlt, fullName, taglineLead, taglineA
           <p className="mt-4 mb-0 text-xs leading-relaxed text-dark-muted">{fullName}</p>
           <p className="mt-7 mb-2 text-xs font-bold text-gold">{scope.label}</p>
           <ol className="m-0 grid list-none p-0">
-            {scope.chips.map((chip) => (
-              <li key={chip.label} className={cn('flex items-baseline gap-3 border-t border-dark-line py-2.5 text-[0.95rem] font-semibold')}>
-                <span className="w-5 shrink-0 text-xs text-gold">{chip.number}</span>
+            {scope.chips.map((chip, i) => (
+              <li key={chip.label} className="group relative flex items-center gap-4 py-2.5 text-[1.05rem] font-semibold">
+                <span className="relative z-10 grid size-9 shrink-0 place-items-center rounded-full border border-gold bg-dark text-sm font-extrabold text-gold transition-colors duration-200 group-hover:bg-gold group-hover:text-gold-ink">
+                  {chip.number}
+                </span>
+                {i < scope.chips.length - 1 && (
+                  <span aria-hidden="true" className="absolute start-[calc(1.125rem-0.5px)] top-[calc(50%+1.125rem)] h-[calc(100%-2.25rem)] w-px bg-gold/40" />
+                )}
                 {chip.label}
               </li>
             ))}

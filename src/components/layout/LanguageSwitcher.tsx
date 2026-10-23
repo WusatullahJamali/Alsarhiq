@@ -12,7 +12,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const { pathname, search, hash } = useLocation()
 
   return (
-    <div role="group" aria-label={t('lang.group')} className={cn('flex items-center text-sm', className)}>
+    <div role="group" aria-label={t('lang.group')} className={cn('flex items-center', className)}>
       {locales.map((locale, i) => {
         const active = locale === lang
         return (
@@ -27,7 +27,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
               aria-label={localeMeta[locale].label}
               aria-current={active ? 'true' : undefined}
               className={cn(
-                'inline-flex min-h-11 min-w-11 items-center justify-center px-2 font-bold transition-colors duration-200',
+                'inline-flex min-h-11 min-w-11 items-center justify-center px-2.5 text-base leading-none font-bold whitespace-nowrap transition-colors duration-200',
                 active ? 'text-brand' : 'text-muted-foreground hover:text-brand',
               )}
             >

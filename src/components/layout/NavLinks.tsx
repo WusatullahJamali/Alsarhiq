@@ -30,7 +30,7 @@ export function NavLinks({ stacked, onNavigate }: NavLinksProps) {
                     'relative flex items-center whitespace-nowrap font-medium transition-colors duration-200',
                     stacked
                       ? 'min-h-12 border-b border-line text-[1.05rem]'
-                      : 'min-h-11 px-3 text-sm after:absolute after:inset-x-3 after:bottom-1.5 after:h-0.5 after:origin-center after:scale-x-0 after:bg-gold after:transition-transform after:duration-300 after:ease-soft hover:after:scale-x-100',
+                      : 'min-h-11 px-3 text-base after:absolute after:inset-x-3 after:bottom-1.5 after:h-0.5 after:origin-center after:scale-x-0 after:bg-gold after:transition-transform after:duration-300 after:ease-soft hover:after:scale-x-100',
                     isActive
                       ? cn('text-brand', stacked ? 'font-bold' : 'font-bold after:scale-x-100')
                       : stacked

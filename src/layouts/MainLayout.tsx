@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import { Outlet } from 'react-router'
+import { BackToTop } from '@/components/layout/BackToTop'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import { MobileCallBar } from '@/components/layout/MobileCallBar'
@@ -22,6 +23,7 @@ export function MainLayout() {
       </main>
       <Footer />
       <MobileCallBar />
+      <BackToTop />
       <ScrollToTop />
     </div>
   )

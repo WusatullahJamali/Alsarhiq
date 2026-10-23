@@ -14,7 +14,7 @@ const GoogleIcon = () => (
 )
 
 const AppleIcon = () => (
-  <svg viewBox="0 0 24 24" aria-hidden="true" className="size-5" fill="currentColor">
+  <svg viewBox="0 0 24 24" aria-hidden="true" className="size-5 text-black" fill="currentColor">
     <path d="M16.37 12.63c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.71-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.1 8.79.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.15.84-1.23 1.19-2.42 1.2-2.48-.03-.01-2.3-.88-2.29-3.54zM14.2 6.13c.61-.74 1.02-1.76.9-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.6-1.23z" />
   </svg>
 )
@@ -40,10 +40,10 @@ export function SocialAuth() {
   }
 
   return (
-    <div className="grid gap-4">
-      <div className="grid gap-3 min-[420px]:grid-cols-2">
+    <div className="grid gap-3">
+      <div className="grid grid-cols-2 gap-3">
         {providers.map(({ key, Icon }) => (
-          <Button key={key} type="button" variant="outline" disabled={status === 'sending'} onClick={() => run(key)}>
+          <Button key={key} type="button" variant="outline" className="whitespace-nowrap" disabled={status === 'sending'} onClick={() => run(key)}>
             <Icon />
             {t(`social.${key}`)}
           </Button>

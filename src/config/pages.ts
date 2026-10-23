@@ -7,14 +7,14 @@
 export const pages = [
   { key: 'home', path: '', layout: 'main', nav: true, footer: true, sitemap: true },
   { key: 'services', path: 'services', layout: 'main', nav: true, footer: true, sitemap: true },
-  { key: 'sectors', path: 'sectors', layout: 'main', nav: true, footer: true, sitemap: true },
-  { key: 'process', path: 'process', layout: 'main', nav: true, footer: true, sitemap: true },
+  { key: 'sectors', path: 'sectors', layout: 'main', nav: true, footer: false, sitemap: true },
+  { key: 'process', path: 'process', layout: 'main', nav: true, footer: false, sitemap: true },
   { key: 'about', path: 'about', layout: 'main', nav: true, footer: true, sitemap: true },
-  { key: 'partners', path: 'partners', layout: 'main', nav: true, footer: true, sitemap: true },
+  { key: 'partners', path: 'partners', layout: 'main', nav: true, footer: false, sitemap: true },
   { key: 'contact', path: 'contact', layout: 'main', nav: false, footer: true, sitemap: true },
   { key: 'privacy', path: 'privacy', layout: 'main', nav: false, footer: false, sitemap: true },
   { key: 'terms', path: 'terms', layout: 'main', nav: false, footer: false, sitemap: true },
-  { key: 'login', path: 'login', layout: 'auth', nav: false, footer: true, sitemap: false },
+  { key: 'login', path: 'login', layout: 'auth', nav: false, footer: false, sitemap: false },
   { key: 'signup', path: 'signup', layout: 'auth', nav: false, footer: false, sitemap: false },
   { key: 'forgot-password', path: 'forgot-password', layout: 'auth', nav: false, footer: false, sitemap: false },
 ] as const

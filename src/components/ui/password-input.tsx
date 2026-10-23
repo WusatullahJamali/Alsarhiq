@@ -21,7 +21,7 @@ export function PasswordInput({ showLabel, hideLabel, className, ...props }: Pas
         aria-pressed={visible}
         className="absolute inset-y-0 end-0 flex w-11 items-center justify-center rounded-md text-muted-foreground transition-colors hover:text-brand"
       >
-        {visible ? <EyeOff className="size-5" /> : <Eye className="size-5" />}
+        {visible ? <Eye className="size-5" /> : <EyeOff className="size-5" />}
       </button>
     </div>
   )

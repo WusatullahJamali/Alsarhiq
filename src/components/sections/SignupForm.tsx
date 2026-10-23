@@ -34,7 +34,7 @@ export function SignupForm() {
   const sending = form.status === 'sending'
 
   return (
-    <form onSubmit={form.onSubmit} noValidate className="grid gap-4">
+    <form onSubmit={form.onSubmit} noValidate className="grid gap-3">
       <FormField id="signup-name" label={t('fields.fullName')} error={form.errors.name} required>
         <Input
           id="signup-name"
@@ -61,7 +61,7 @@ export function SignupForm() {
           aria-describedby={form.errors.email ? 'signup-email-error' : undefined}
         />
       </FormField>
-      <div className="grid gap-4 min-[520px]:grid-cols-2">
+      <div className="grid gap-3 min-[520px]:grid-cols-2">
         <FormField id="signup-password" label={t('fields.password')} error={form.errors.password} required>
           <PasswordInput
             id="signup-password"

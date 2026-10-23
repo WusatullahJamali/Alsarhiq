@@ -25,7 +25,7 @@ export function LoginForm() {
   const sending = form.status === 'sending'
 
   return (
-    <form onSubmit={form.onSubmit} noValidate className="grid gap-4">
+    <form onSubmit={form.onSubmit} noValidate className="grid gap-3">
       <FormField id="login-email" label={t('fields.email')} error={form.errors.email} required>
         <Input
           id="login-email"

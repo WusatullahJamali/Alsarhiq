@@ -15,7 +15,7 @@ export function FooterCta() {
 
   return (
     <section aria-labelledby="footer-cta-title" className="border-t border-line bg-tint">
-      <Container className="py-8 sm:py-10">
+      <Container className="py-12 sm:py-16">
         <Reveal className="flex flex-wrap items-center justify-between gap-x-10 gap-y-6">
           <div className="max-w-[34em]">
             <Heading id="footer-cta-title" size="h3" className="mb-2 text-brand">
