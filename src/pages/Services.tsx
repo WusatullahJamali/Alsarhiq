@@ -8,8 +8,8 @@ export default function Services() {
 
   return (
     <>
-      <PageIntro title={t('header.title')} lead={t('header.lead')} />
-      <ServicesSection items={useServices()} cardLevel="h2" />
+      <PageIntro title={t('h1')} lead={t('header.lead')} meta={{ title: t('meta.title'), description: t('meta.description') }} />
+      <ServicesSection items={useServices()} />
     </>
   )
 }

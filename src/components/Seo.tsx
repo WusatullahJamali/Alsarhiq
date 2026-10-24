@@ -26,7 +26,8 @@ export function Seo({ title, description, organization, noindex }: SeoProps) {
   const { lang } = useLang()
   const { pathname } = useLocation()
   const brand = t('brand.name')
-  const fullTitle = title === brand ? title : `${title} | ${brand}`
+  // A title that already carries its own "| Brand" suffix is used as written.
+  const fullTitle = title === brand || title.includes(' | ') ? title : `${title} | ${brand}`
   const canonical = abs(pathname.replace(/\/+$/, ''))
 
   return (
@@ -34,7 +35,7 @@ export function Seo({ title, description, organization, noindex }: SeoProps) {
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
-      <link rel="canonical" href={canonical} />
+      {!noindex && <link rel="canonical" href={canonical} />}
       {!noindex &&
         locales.map((locale) => <link key={locale} rel="alternate" hrefLang={locale} href={abs(switchLangPath(pathname, locale))} />)}
       {!noindex && <link rel="alternate" hrefLang="x-default" href={abs(switchLangPath(pathname, defaultLocale))} />}

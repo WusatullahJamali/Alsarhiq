@@ -70,7 +70,7 @@ export function Footer() {
             <li>
               <a href={`tel:${siteConfig.phoneIntl}`} dir="ltr" className={`${footerLink} gap-2.5 text-start`} style={{ unicodeBidi: 'isolate' }}>
                 <Phone aria-hidden="true" className="size-4 shrink-0 text-gold" />
-                {siteConfig.phone}
+                {siteConfig.phoneDisplay}
               </a>
             </li>
             {siteConfig.email && (

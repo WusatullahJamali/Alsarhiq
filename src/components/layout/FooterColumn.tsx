@@ -16,7 +16,7 @@ interface FooterColumnProps {
 export function FooterColumn({ title, children, className, columns = 1 }: FooterColumnProps) {
   return (
     <div className={cn('min-w-0', className)}>
-      <h2 className="m-0 mb-2 text-lg font-bold text-dark-fg after:mt-2 after:block after:h-0.5 after:w-8 after:bg-gold">{title}</h2>
+      <p className="m-0 mb-2 text-lg font-bold text-dark-fg after:mt-2 after:block after:h-0.5 after:w-8 after:bg-gold">{title}</p>
       <ul className={cn('m-0 grid list-none gap-0 p-0', columns === 2 && 'grid-cols-2 gap-x-4')}>{children}</ul>
     </div>
   )

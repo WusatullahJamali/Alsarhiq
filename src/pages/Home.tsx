@@ -35,12 +35,12 @@ export default function Home() {
         taglineLead={t('hero.taglineLead')}
         taglineAccent={t('hero.taglineAccent')}
         lead={t('hero.lead')}
-        primary={{ label: common('cta.quote'), to: to('contact') }}
+        primary={{ label: t('links.contact'), to: to('contact') }}
         secondary={{ label: common('cta.services'), to: to('services') }}
         scope={{ label: tSectors('scopeAria'), chips: useScopeChips() }}
       />
       <ServicesSection items={useServices()} title={tServices('header.title')} lead={tServices('header.lead')}>
-        <SectionLink to={to('services')} label={learnMore} />
+        <SectionLink to={to('services')} label={t('links.services')} />
       </ServicesSection>
       <SectorsSection items={useSectors()} title={tSectors('header.title')} lead={tSectors('header.lead')} layout="list">
         <SectionLink to={to('sectors')} label={learnMore} />
@@ -49,7 +49,7 @@ export default function Home() {
         <SectionLink to={to('process')} label={learnMore} />
       </ProcessSection>
       <ReasonsSection items={useReasons()} title={tAbout('header.title')} lead={tAbout('header.lead')}>
-        <SectionLink to={to('about')} label={learnMore} />
+        <SectionLink to={to('about')} label={t('links.about')} />
       </ReasonsSection>
       <PartnersMarquee
         partners={partners}

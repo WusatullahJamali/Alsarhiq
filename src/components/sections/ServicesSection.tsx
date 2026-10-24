@@ -9,13 +9,12 @@ interface ServicesSectionProps {
   items: ServiceItem[]
   title?: string
   lead?: string
-  cardLevel?: 'h2' | 'h3'
   /** Optional footer slot, e.g. a link to the full page. */
   children?: React.ReactNode
 }
 
 /** Editorial rows instead of three equal cards: big verb on the start side, detail on the end side. */
-export function ServicesSection({ items, title, lead, cardLevel = 'h3', children }: ServicesSectionProps) {
+export function ServicesSection({ items, title, lead, children }: ServicesSectionProps) {
   return (
     <Section aria-labelledby={title ? 'services-title' : undefined}>
       {title && (
@@ -27,8 +26,8 @@ export function ServicesSection({ items, title, lead, cardLevel = 'h3', children
         {items.map((item, i) => (
           <Reveal key={item.title} id={`service-${i + 1}`} index={i} className="target:bg-tint grid gap-x-12 gap-y-4 border-b border-line py-6 sm:py-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:py-10">
             <div className="min-w-0">
-              <span className="text-xs font-bold text-gold-text">{item.kicker}</span>
-              <Heading as={cardLevel} className="mt-1 text-[clamp(2.25rem,5vw,3.5rem)] leading-none text-brand">
+              <h2 className="m-0 text-xs font-bold text-gold-text">{item.kicker}</h2>
+              <Heading as="h3" className="mt-1 text-[clamp(2.25rem,5vw,3.5rem)] leading-none text-brand">
                 {item.title}
               </Heading>
             </div>

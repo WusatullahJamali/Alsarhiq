@@ -25,7 +25,7 @@
       "group": "Language"
     },
     "call": {
-      "aria": "Call 07706699333",
+      "aria": "Call 0770 669 9333",
       "now": "Call now",
       "short": "Call",
       "label": "Phone"
@@ -64,9 +64,14 @@
     }
   },
   "home": {
+    "links": {
+      "services": "Explore Our Construction & Contracting Services",
+      "about": "About Al-Sarh Al-Mutakamel",
+      "contact": "Request a Construction Project Quote"
+    },
     "meta": {
-      "title": "Al-Sarh Al-Mutakamel",
-      "description": "Al-Sarh Al-Mutakamel: general contracting, trading and supply, and real estate investment for government, healthcare, industrial, commercial and residential projects in Iraq."
+      "title": "General Contracting & Construction in Iraq | Alsarhiq",
+      "description": "Discover Alsarhiq’s general contracting, construction, trading and real estate investment services in Iraq. Explore our company and contact us for project inquiries."
     },
     "hero": {
       "eyebrow": "Iraqi company · Limited Liability",
@@ -81,6 +86,11 @@
     }
   },
   "services": {
+    "h1": "Construction, Trading & Real Estate Services in Iraq",
+    "meta": {
+      "title": "Construction, Trading & Real Estate Services | Alsarhiq",
+      "description": "Explore Alsarhiq’s general contracting, construction, building material supply and real estate investment services across Iraq. Request a project quotation."
+    },
     "header": {
       "title": "Three Services. One Company.",
       "lead": "Our name says what we do: trading, contracting and real estate investment. With all three in one company, there are fewer intermediaries, and supply and construction are easier to coordinate."
@@ -267,6 +277,17 @@
     ]
   },
   "about": {
+    "h1": "About Al-Sarh Al-Mutakamel",
+    "approach": "Our Approach to Projects",
+    "quality": "Quality & Coordination",
+    "links": {
+      "services": "Explore Our Services",
+      "contact": "Discuss Your Project With Alsarhiq"
+    },
+    "meta": {
+      "title": "About Alsarhiq | Contracting Company in Iraq",
+      "description": "Learn about Alsarhiq, our approach to construction, project management, materials supply and real estate investment in the Iraqi market."
+    },
     "header": {
       "title": "Why Al-Sarh Al-Mutakamel?",
       "lead": "Our management’s experience in construction, project management and real estate finance, applied to the Iraqi market."
@@ -355,6 +376,14 @@
     ]
   },
   "contact": {
+    "h1": "Contact Alsarhiq for Project Inquiries",
+    "links": {
+      "services": "View Construction and Supply Services"
+    },
+    "meta": {
+      "title": "Contact Alsarhiq | Construction & Contracting Inquiries",
+      "description": "Contact Alsarhiq about general contracting, construction, materials supply or real estate investment in Iraq. Send your project details to request a quotation."
+    },
     "header": {
       "title": "Contact Us",
       "lead": "Call us directly, or prepare your project details and send them by WhatsApp. We will contact you to arrange next steps."
@@ -365,7 +394,7 @@
       "selected": "Number selected, copy it manually"
     },
     "form": {
-      "title": "Quote Request",
+      "title": "Request a Quote",
       "note": "This website does not send any data. The button prepares a WhatsApp message with your details for you to send.",
       "noteEndpoint": "Details sent through this form go to the Al-Sarh Al-Mutakamel team and are used only to respond to your request.",
       "name": "Name",

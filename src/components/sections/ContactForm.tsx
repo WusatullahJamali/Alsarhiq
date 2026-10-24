@@ -162,9 +162,9 @@ export function ContactForm() {
       <FormMessage tone="error">
         {failed && (
           <>
-            <p className="m-0">{t('form.sendFail', { phone: siteConfig.phone })}</p>
+            <p className="m-0">{t('form.sendFail', { phone: siteConfig.phoneDisplay })}</p>
             <a href={`tel:${siteConfig.phoneIntl}`} className={buttonVariants({ variant: 'outline', size: 'sm' })}>
-              <bdi dir="ltr">{siteConfig.phone}</bdi>
+              <bdi dir="ltr">{siteConfig.phoneDisplay}</bdi>
             </a>
           </>
         )}

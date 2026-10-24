@@ -46,9 +46,9 @@ export function ContactInfo() {
       </Heading>
 
       <div className="flex gap-2">
-        <a href={`tel:${siteConfig.phoneIntl}`} className={card} aria-label={`${t('info.call')}: ${siteConfig.phone}`}>
+        <a href={`tel:${siteConfig.phoneIntl}`} className={card} aria-label={`${t('info.call')}: ${siteConfig.phoneDisplay}`}>
           <Row label={t('info.call')}>
-            <bdi dir="ltr">{siteConfig.phone}</bdi>
+            <bdi dir="ltr">{siteConfig.phoneDisplay}</bdi>
           </Row>
         </a>
         <button

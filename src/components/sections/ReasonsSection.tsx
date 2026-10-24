@@ -9,17 +9,19 @@ interface ReasonsSectionProps {
   title?: string
   lead?: string
   itemLevel?: 'h2' | 'h3'
+  /** Heading id; set it when a page shows more than one reasons section. */
+  id?: string
   children?: React.ReactNode
 }
 
 /** Statement on the start side (the lead as a pull quote), numbered reasons on the end side. */
-export function ReasonsSection({ items, title, lead, itemLevel = 'h3', children }: ReasonsSectionProps) {
+export function ReasonsSection({ items, title, lead, itemLevel = 'h3', id = 'reasons-title', children }: ReasonsSectionProps) {
   const { padded } = useFormat()
   return (
-    <Section aria-labelledby={title ? 'reasons-title' : undefined} containerClassName={title ? 'grid gap-x-16 gap-y-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]' : undefined}>
+    <Section aria-labelledby={title ? id : undefined} containerClassName={title ? 'grid gap-x-16 gap-y-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]' : undefined}>
       {title && (
       <Reveal className="min-w-0 lg:sticky lg:top-28 lg:self-start">
-        <Heading id="reasons-title">{title}</Heading>
+        <Heading id={id}>{title}</Heading>
         {lead && <p className="mt-6 mb-0 max-w-[26em] border-s-4 border-gold ps-5 text-h4 leading-relaxed font-medium text-brand">{lead}</p>}
         {children}
       </Reveal>
