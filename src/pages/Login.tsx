@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { LoginForm } from '@/components/sections/LoginForm'
 import { AuthShell } from '@/components/sections/AuthShell'
+import { PageNote } from '@/components/sections/PageNote'
 import { Seo } from '@/components/Seo'
 import { useLocalizedPath } from '@/hooks/useLang'
 
@@ -27,6 +28,7 @@ export default function Login() {
       >
         <LoginForm />
       </AuthShell>
+      <PageNote ns="auth" k="login.info" />
     </>
   )
 }

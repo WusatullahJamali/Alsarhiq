@@ -14,8 +14,6 @@ interface LegalDocumentProps {
   updatedDate: string
 }
 
-const placeholder = /^\[PLACEHOLDER/
-
 /** Reading layout: numbered sections on the end side, a sticky contents list on the start side (large screens). */
 export function LegalDocument({ sections, tocLabel, updatedLabel, updatedDate }: LegalDocumentProps) {
   return (
@@ -50,7 +48,7 @@ export function LegalDocument({ sections, tocLabel, updatedLabel, updatedDate }:
               {section.title}
             </Heading>
             {section.body.map((paragraph) => (
-              <p key={paragraph} className={placeholder.test(paragraph) ? 'my-2 rounded-md border border-dashed border-line-2 bg-tint px-3 py-2 text-sm text-muted-foreground' : 'my-2 leading-relaxed'}>
+              <p key={paragraph} className="my-2 leading-relaxed">
                 {paragraph}
               </p>
             ))}

@@ -34,7 +34,7 @@ export function Seo({ title, description, organization, noindex }: SeoProps) {
     <>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+      <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
       {!noindex && <link rel="canonical" href={canonical} />}
       {!noindex &&
         locales.map((locale) => <link key={locale} rel="alternate" hrefLang={locale} href={abs(switchLangPath(pathname, locale))} />)}

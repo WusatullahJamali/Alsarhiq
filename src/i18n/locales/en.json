@@ -295,12 +295,14 @@
     },
     "note": {
       "title": "What You Can Expect at Every Stage",
-      "text": "Each stage ends with an inspection and your acceptance before the next one begins. You receive progress reports as the work moves forward, so scope, schedule and cost stay visible from the first study to handover.",
+      "text": "Each stage ends with an inspection and your acceptance before the next one begins. You receive progress reports as the work moves forward, so scope, schedule and cost stay visible from the first study to handover. If the scope changes during the work, we agree the effect on price and schedule with you in writing before the change is carried out.",
       "list": [
         "A written, itemized quotation before work starts",
         "Inspection before each stage is accepted",
         "Regular progress reports",
-        "Handover with as-built drawings"
+        "Handover with as-built drawings",
+        "A written agreement on any change of scope before it is carried out",
+        "Site photos after each major stage"
       ]
     }
   },
@@ -348,7 +350,7 @@
     ],
     "note": {
       "title": "One Company, Three Disciplines",
-      "text": "Al-Sarh Al-Mutakamel combines general contracting, general trading and real estate investment in one Iraqi limited liability company. Clients deal with one team for building, materials and property development, which keeps responsibility clear from the first quotation to handover."
+      "text": "Al-Sarh Al-Mutakamel combines general contracting, general trading and real estate investment in one Iraqi limited liability company. Clients deal with one team for building, materials and property development, which keeps responsibility clear from the first quotation to handover. We work with independent partners in complementary fields when needed, but responsibility to you stays with Alsarhiq alone and is set out in a written contract for each project."
     }
   },
   "partners": {
@@ -490,7 +492,9 @@
         "Preferred start date and any deadline",
         "Available drawings, specifications or a materials list",
         "Special requirements, such as materials, standards or access to the site",
-        "A phone number where we can reach you"
+        "A phone number where we can reach you",
+        "Your name and the company you represent, if any",
+        "The best time of day to reach you"
       ]
     }
   },
@@ -520,7 +524,20 @@
       "submit": "Sign in",
       "noAccount": "No account yet?",
       "toSignup": "Create one",
-      "success": "Your details were accepted. Sign-in will work once accounts are connected."
+      "success": "Your details were accepted. Sign-in will work once accounts are connected.",
+      "info": {
+        "title": "Signing in to your account",
+        "text": "Use the email address and password you chose when you created your account. Your account will let you follow requests and projects with Alsarhiq once accounts are enabled on this website. Your details are not stored on this website at the moment, and nobody on our team can see a password. If something does not work, you can always reach our team by phone or WhatsApp, and we will help you directly. We also advise checking that the address in your browser is correct before you enter any details.",
+        "list": [
+          "Enter the same email address you used to register",
+          "Passwords use at least one letter and one number",
+          "Use “Forgot password?” if you cannot remember yours",
+          "No account yet? Create one in under a minute",
+          "Need help? Call or message us from the contact page",
+          "Sign out on shared computers after you finish",
+          "Never share your password with anyone, including our team"
+        ]
+      }
     },
     "signup": {
       "title": "Create an account",
@@ -530,7 +547,20 @@
       "haveAccount": "Already have an account?",
       "toLogin": "Sign in",
       "agree": "I agree to the <terms>Terms of Use</terms> and the <privacy>Privacy Policy</privacy>.",
-      "success": "Your details were accepted. Your account will be created once accounts are connected."
+      "success": "Your details were accepted. Your account will be created once accounts are connected.",
+      "info": {
+        "title": "Why create an account",
+        "text": "An Alsarhiq account is the place to send project requests and follow their progress with our team once accounts are enabled on this website. Creating one takes about a minute and needs only a few details. You will not be asked for payment details, and you can leave the page at any time without creating an account. Accounts are optional: you can still request a quotation by phone or WhatsApp without registering. We advise choosing a password that is hard to guess and not reusing it on other websites.",
+        "list": [
+          "Your name and a valid email address",
+          "A password with at least one letter and one number",
+          "Agreement to the Terms of Use and Privacy Policy",
+          "Your details are used only to respond to your requests",
+          "You can ask us to correct or delete your details at any time",
+          "No payment details are requested",
+          "You can use the contact page instead if you prefer to talk to us"
+        ]
+      }
     },
     "forgot": {
       "title": "Reset your password",
@@ -538,7 +568,20 @@
       "meta": "Forgot your Alsarhiq password? Enter your email and we will send you a link to reset it.",
       "submit": "Send reset link",
       "back": "Back to sign in",
-      "success": "If this email is registered, a reset link will be sent to it."
+      "success": "If this email is registered, a reset link will be sent to it.",
+      "info": {
+        "title": "How password reset works",
+        "text": "Enter the email address of your account and we will send you a link to choose a new password. For your security, we show the same message whether or not the email is registered. The link is meant for you only, so do not forward the email, and ask for a new link if the first one stops working. If you still cannot sign in after resetting your password, contact our team and we will help you directly. We advise choosing a new password that is hard to guess and not reusing it on other websites.",
+        "list": [
+          "Check your inbox and your spam folder for the reset link",
+          "The link lets you choose a new password for your account",
+          "Did not receive it? Wait a few minutes and try again",
+          "Remembered your password? Go back and sign in",
+          "Need help? Call or message us from the contact page",
+          "Do not share the reset link with anyone",
+          "Request a new link if the first one stops working"
+        ]
+      }
     },
     "errors": {
       "name": "Please enter your name.",
@@ -564,37 +607,52 @@
           "id": "storage",
           "title": "What this website stores",
           "body": [
-            "This website saves only your language choice in your browser. It does not store the details of the request form and does not send them; they go to WhatsApp only when you choose to send them yourself."
+            "This website saves only your language choice in your browser. It does not use advertising or tracking cookies.",
+            "It does not store the details of the request form and does not send them; they go to WhatsApp only when you choose to send them yourself."
           ]
         },
         {
           "id": "requests",
           "title": "Requests you send us",
           "body": [
-            "Details you enter in the contact form are used only to respond to your request.",
-            "[PLACEHOLDER: confirm how and where requests are received and how long they are kept.]"
+            "Details you enter in the contact form are used only to respond to your request, such as preparing a quotation or answering a question about a project.",
+            "We keep your messages only as long as needed to handle your inquiry and any project that follows from it. We do not sell your details or share them with third parties for marketing."
           ]
         },
         {
           "id": "accounts",
           "title": "Accounts",
           "body": [
-            "Sign-in and registration are not connected to a server yet.",
-            "[PLACEHOLDER: describe how account data is handled once accounts are enabled.]"
+            "Sign-in and registration pages are shown for preview and are not yet connected to a server, so no account details are stored.",
+            "When accounts are enabled, we will collect only the details needed to create and secure your account, and we will update this policy before we do."
           ]
         },
         {
           "id": "links",
           "title": "Links to other websites",
           "body": [
-            "Our partners’ websites are separate sites with their own policies."
+            "Our partners’ websites are separate sites with their own policies. We are not responsible for their content or for how they handle your information."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "Your choices",
+          "body": [
+            "You can ask us what information we hold about you, and ask us to correct or delete it, by contacting us with the details on the contact page."
           ]
         },
         {
           "id": "contact",
           "title": "Questions",
           "body": [
-            "[PLACEHOLDER: privacy contact name and email.]"
+            "For any privacy question, contact us by phone or WhatsApp using the details on the contact page. We will reply as soon as we reasonably can."
+          ]
+        },
+        {
+          "id": "changes",
+          "title": "Changes to this policy",
+          "body": [
+            "We may update this policy from time to time. The date at the top of this page shows when it was last changed."
           ]
         }
       ]
@@ -607,7 +665,8 @@
           "id": "information",
           "title": "Information on this website",
           "body": [
-            "Prices, schedules and warranties are set in the signed contract for each project. Nothing on this website is a binding offer."
+            "Prices, schedules and warranties are set in the signed contract for each project. Nothing on this website is a binding offer.",
+            "We take care to keep the information on this website accurate and current, but it is provided for general information only."
           ]
         },
         {
@@ -615,30 +674,50 @@
           "title": "Quotations and contracts",
           "body": [
             "A quotation is prepared in writing after we review your project. Work starts under a signed contract.",
-            "[PLACEHOLDER: governing law and place of jurisdiction.]"
+            "The contract for each project sets out its scope, price, schedule, payment terms and any warranty period."
           ]
         },
         {
           "id": "use",
           "title": "Using the website",
           "body": [
-            "Please use this website lawfully and do not misuse its forms.",
-            "[PLACEHOLDER: acceptable-use terms, to be reviewed by the company’s legal adviser.]"
+            "Please use this website lawfully and do not misuse its forms, for example by sending false, abusive or automated messages.",
+            "We may limit access to the website if it is used in a way that harms the site or other visitors."
+          ]
+        },
+        {
+          "id": "ownership",
+          "title": "Content and ownership",
+          "body": [
+            "The text, logos, images and design of this website belong to the company or its partners and may not be copied or reused without permission."
           ]
         },
         {
           "id": "partners",
           "title": "Partner companies",
           "body": [
-            "Each partner company is an independent company; details of each relationship are agreed separately."
+            "Each partner company is an independent company; details of each relationship are agreed separately. Listing a partner on this website does not make it part of Alsarhiq."
+          ]
+        },
+        {
+          "id": "liability",
+          "title": "Limits of responsibility",
+          "body": [
+            "We are not responsible for losses that result from relying on the general information on this website instead of a signed contract, or from the content of external websites linked from it."
+          ]
+        },
+        {
+          "id": "law",
+          "title": "Governing law",
+          "body": [
+            "These terms and any dispute about a project are governed by the signed contract for that project and by the laws that apply in Iraq."
           ]
         },
         {
           "id": "changes",
           "title": "Changes to these terms",
           "body": [
-            "These terms may be updated from time to time.",
-            "[PLACEHOLDER: how changes are announced.]"
+            "These terms may be updated from time to time. The date at the top of this page shows when they were last changed, and continued use of the website means you accept the current version."
           ]
         }
       ]

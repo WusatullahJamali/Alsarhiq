@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { SignupForm } from '@/components/sections/SignupForm'
 import { AuthShell } from '@/components/sections/AuthShell'
+import { PageNote } from '@/components/sections/PageNote'
 import { Seo } from '@/components/Seo'
 import { useLocalizedPath } from '@/hooks/useLang'
 
@@ -27,6 +28,7 @@ export default function Signup() {
       >
         <SignupForm />
       </AuthShell>
+      <PageNote ns="auth" k="signup.info" />
     </>
   )
 }
