@@ -16,6 +16,19 @@ interface PartnersMarqueeProps {
 }
 
 function Wordmark({ partner, newTabLabel, hidden }: { partner: Partner; newTabLabel: string; hidden?: boolean }) {
+  const label = (
+    <>
+      {partner.name}
+      {'suffix' in partner && <small className="text-xs font-medium">{partner.suffix}</small>}
+    </>
+  )
+  if ('offline' in partner) {
+    return (
+      <span lang="en" dir="ltr" className="flex min-h-12 items-center gap-1.5 px-6 text-h5 font-extrabold tracking-tight whitespace-nowrap text-dark-soft sm:min-h-14 sm:px-8 sm:text-h4">
+        {label}
+      </span>
+    )
+  }
   return (
     <a
       href={`https://${partner.site}`}
@@ -26,8 +39,7 @@ function Wordmark({ partner, newTabLabel, hidden }: { partner: Partner; newTabLa
       tabIndex={hidden ? -1 : undefined}
       className="flex min-h-12 items-center gap-1.5 px-6 text-h5 font-extrabold tracking-tight whitespace-nowrap text-dark-soft transition-colors duration-200 hover:text-gold focus-visible:text-gold sm:min-h-14 sm:px-8 sm:text-h4"
     >
-      {partner.name}
-      {'suffix' in partner && <small className="text-xs font-medium">{partner.suffix}</small>}
+      {label}
       <span className="sr-only">{newTabLabel}</span>
     </a>
   )

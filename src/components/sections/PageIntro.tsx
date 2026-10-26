@@ -6,7 +6,7 @@ interface PageIntroProps {
   title: string
   lead?: string
   /** Search title and description, when they should differ from the h1 and lead. */
-  meta?: { title: string; description: string }
+  meta?: { title?: string; description: string }
 }
 
 /** Dark title band of every inner page: the page's only h1, plus its SEO title and description (the lead unless `meta`). */

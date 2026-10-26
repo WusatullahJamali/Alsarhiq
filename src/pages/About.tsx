@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { PageIntro } from '@/components/sections/PageIntro'
+import { PageNote } from '@/components/sections/PageNote'
 import { ReasonsSection } from '@/components/sections/ReasonsSection'
 import { SectionLink } from '@/components/sections/SectionLink'
 import { useReasons } from '@/hooks/useContent'
@@ -22,6 +23,7 @@ export default function About() {
         <SectionLink to={to('services')} label={t('links.services')} />
         <SectionLink to={to('contact')} label={t('links.contact')} />
       </ReasonsSection>
+      <PageNote ns="about" />
     </>
   )
 }

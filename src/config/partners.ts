@@ -1,3 +1,4 @@
+/** `offline`: the site did not answer when last checked (Oct 2026), so it is shown as text, not a link. Remove the flag once it works again. */
 /** Partner names and sites are brand names, not translated. Role and description text lives in each language's partners.json, matched by position. */
 export const partners = [
   { id: 'jayak', name: 'JayakHub', site: 'jayakhub.com' },
@@ -9,9 +10,9 @@ export const partners = [
   { id: 'siteflows', name: 'SiteFlows', site: 'siteflows.ai' },
   { id: 'sentinel', name: 'Sentinel Kids', site: 'sentinelkids.com' },
   { id: 'roos', name: 'Roos Brothers 1865', site: 'roosbrothers1865.com' },
-  { id: 'damantrax', name: 'DamanTrax', site: 'damantrax.com' },
-  { id: 'albasync', name: 'AlbaSync', site: 'albasync.com' },
-  { id: 'advibe', name: 'AdVibe Group', site: 'advibegroup.com' },
+  { id: 'damantrax', name: 'DamanTrax', site: 'damantrax.com', offline: true },
+  { id: 'albasync', name: 'AlbaSync', site: 'albasync.com', offline: true },
+  { id: 'advibe', name: 'AdVibe Group', site: 'advibegroup.com', offline: true },
 ] as const
 
 export type Partner = (typeof partners)[number]

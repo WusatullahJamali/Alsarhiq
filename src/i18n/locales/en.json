@@ -33,7 +33,6 @@
     "cta": {
       "quote": "Request a Quote",
       "services": "Explore Our Services",
-      "learnMore": "Learn more",
       "contact": "Contact Us"
     },
     "newTab": "(opens in a new tab)",
@@ -67,11 +66,14 @@
     "links": {
       "services": "Explore Our Construction & Contracting Services",
       "about": "About Al-Sarh Al-Mutakamel",
-      "contact": "Request a Construction Project Quote"
+      "contact": "Request a Construction Project Quote",
+      "sectors": "Explore the Sectors We Serve",
+      "process": "See Our Project Process",
+      "partners": "Meet Our Partners"
     },
     "meta": {
       "title": "General Contracting & Construction in Iraq | Alsarhiq",
-      "description": "Discover Alsarhiq’s general contracting, construction, trading and real estate investment services in Iraq. Explore our company and contact us for project inquiries."
+      "description": "Alsarhiq is an Iraqi general contracting, construction, building materials trading and real estate investment company. Request a quote."
     },
     "hero": {
       "eyebrow": "Iraqi company · Limited Liability",
@@ -89,7 +91,7 @@
     "h1": "Construction, Trading & Real Estate Services in Iraq",
     "meta": {
       "title": "Construction, Trading & Real Estate Services | Alsarhiq",
-      "description": "Explore Alsarhiq’s general contracting, construction, building material supply and real estate investment services across Iraq. Request a project quotation."
+      "description": "General contracting, construction, building material supply and real estate investment services across Iraq. Request a project quotation."
     },
     "header": {
       "title": "Three Services. One Company.",
@@ -135,7 +137,17 @@
           "Resale and exit planning"
         ]
       }
-    ]
+    ],
+    "note": {
+      "title": "How to Choose the Right Service",
+      "text": "Most projects combine more than one service. A building project may need construction, a materials supply plan and, for investment projects, a feasibility study before work begins. Because all three services sit in one company, they are coordinated under one management.",
+      "list": [
+        "Building a new property: start with We Build",
+        "Supplying a contractor or a site: start with We Supply",
+        "Developing land or property for sale or lease: start with We Invest",
+        "Not sure which fits: describe the project and we will advise you"
+      ]
+    }
   },
   "sectors": {
     "header": {
@@ -245,7 +257,10 @@
           "Operation and maintenance support"
         ]
       }
-    ]
+    ],
+    "meta": {
+      "description": "Alsarhiq builds, equips and maintains hospitals, schools, ministries, factories, compounds and utilities for public and private clients in Iraq."
+    }
   },
   "process": {
     "header": {
@@ -274,7 +289,20 @@
         "title": "Inspection & Handover",
         "text": "A final walkthrough with you, then handover under the contract terms, including any agreed warranty period. Snag items are fixed and signed off before final payment."
       }
-    ]
+    ],
+    "meta": {
+      "description": "See how Alsarhiq delivers construction projects in five inspected stages, from study and costing to design, structure, finishes and handover."
+    },
+    "note": {
+      "title": "What You Can Expect at Every Stage",
+      "text": "Each stage ends with an inspection and your acceptance before the next one begins. You receive progress reports as the work moves forward, so scope, schedule and cost stay visible from the first study to handover.",
+      "list": [
+        "A written, itemized quotation before work starts",
+        "Inspection before each stage is accepted",
+        "Regular progress reports",
+        "Handover with as-built drawings"
+      ]
+    }
   },
   "about": {
     "h1": "About Al-Sarh Al-Mutakamel",
@@ -317,7 +345,11 @@
         "title": "Local market knowledge",
         "text": "We know Iraqi suppliers, authorities and site conditions, and plan schedules and budgets around them rather than around assumptions."
       }
-    ]
+    ],
+    "note": {
+      "title": "One Company, Three Disciplines",
+      "text": "Al-Sarh Al-Mutakamel combines general contracting, general trading and real estate investment in one Iraqi limited liability company. Clients deal with one team for building, materials and property development, which keeps responsibility clear from the first quotation to handover."
+    }
   },
   "partners": {
     "header": {
@@ -373,7 +405,11 @@
         "role": "Technology & SaaS",
         "text": "A technology group delivering software across many stacks: SaaS products, web and mobile applications, cloud infrastructure and custom development for companies."
       }
-    ]
+    ],
+    "meta": {
+      "title": "Partners & Strategic Relationships | Alsarhiq",
+      "description": "Alsarhiq works with independent partner companies in logistics, international trade, technology and AI. Details of each relationship on request."
+    }
   },
   "contact": {
     "h1": "Contact Alsarhiq for Project Inquiries",
@@ -382,7 +418,7 @@
     },
     "meta": {
       "title": "Contact Alsarhiq | Construction & Contracting Inquiries",
-      "description": "Contact Alsarhiq about general contracting, construction, materials supply or real estate investment in Iraq. Send your project details to request a quotation."
+      "description": "Contact Alsarhiq about contracting, construction, materials supply or real estate investment in Iraq. Send project details for a quotation."
     },
     "header": {
       "title": "Contact Us",
@@ -443,6 +479,19 @@
       "call": "Call us",
       "whatsapp": "WhatsApp",
       "hours": "Working hours"
+    },
+    "note": {
+      "title": "What to Include in Your Request",
+      "text": "A complete request lets us prepare a written, itemized quotation faster. Whether you call us or send a WhatsApp message, the details below help us understand the scope of your project before we reply. If you are not sure about some details, send what you have, and we will confirm the rest when we contact you.",
+      "list": [
+        "Type of work: construction, materials supply or real estate investment",
+        "Project location and approximate area",
+        "Number of floors or units, if known",
+        "Preferred start date and any deadline",
+        "Available drawings, specifications or a materials list",
+        "Special requirements, such as materials, standards or access to the site",
+        "A phone number where we can reach you"
+      ]
     }
   },
   "auth": {
@@ -506,7 +555,7 @@
     "toc": "On this page",
     "privacy": {
       "title": "Privacy Policy",
-      "lead": "What this website stores and how requests you send us are used.",
+      "lead": "What this website stores, how requests you send us are used, and how to contact us with privacy questions.",
       "sections": [
         {
           "id": "storage",
@@ -549,7 +598,7 @@
     },
     "terms": {
       "title": "Terms of Use",
-      "lead": "The basic terms for using this website and requesting quotations.",
+      "lead": "The basic terms for using this website, requesting quotations and dealing with the partner companies listed on it.",
       "sections": [
         {
           "id": "information",

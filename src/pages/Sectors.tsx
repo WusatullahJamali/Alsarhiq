@@ -8,7 +8,7 @@ export default function Sectors() {
 
   return (
     <>
-      <PageIntro title={t('header.title')} lead={t('header.lead')} />
+      <PageIntro title={t('header.title')} lead={t('header.lead')} meta={{ description: t('meta.description') }} />
       <SectorsSection items={useSectors()} scope={{ label: t('scopeAria'), chips: useScopeChips() }} cardLevel="h2" />
     </>
   )

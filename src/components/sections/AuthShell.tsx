@@ -41,9 +41,9 @@ export function AuthShell({ title, lead, children, footer, social }: AuthShellPr
             </p>
             <p className="m-0 max-w-[30em] text-dark-muted">{home('hero.lead')}</p>
           </div>
-          <a href={siteConfig.url} dir="ltr" className="w-fit text-sm font-semibold text-gold hover:underline">
+          <Link to={to()} dir="ltr" className="w-fit text-sm font-semibold text-gold hover:underline">
             {siteConfig.domain}
-          </a>
+          </Link>
         </div>
       </aside>
       <Container className="flex flex-col py-4 sm:py-6 lg:h-svh lg:overflow-hidden lg:px-12 lg:py-4">

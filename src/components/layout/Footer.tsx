@@ -83,9 +83,9 @@ export function Footer() {
             )}
             <li className="flex min-h-11 items-center gap-2.5">
               <Globe aria-hidden="true" className="size-4 shrink-0 text-gold" />
-              <a href={siteConfig.url} dir="ltr" className={`${footerLink} font-semibold text-dark-fg`}>
+              <Link to={to()} dir="ltr" className={`${footerLink} font-semibold text-dark-fg`}>
                 {siteConfig.domain}
-              </a>
+              </Link>
             </li>
             <li className="flex min-h-11 items-center gap-2.5">
               <MapPin aria-hidden="true" className="size-4 shrink-0 text-gold" />

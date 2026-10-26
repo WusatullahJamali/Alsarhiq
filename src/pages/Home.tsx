@@ -21,7 +21,6 @@ export default function Home() {
   const { t: tAbout } = useTranslation('about')
   const { t: tPartners } = useTranslation('partners')
   const to = useLocalizedPath()
-  const learnMore = common('cta.learnMore')
 
   return (
     <>
@@ -29,7 +28,7 @@ export default function Home() {
       <Hero
         eyebrow={t('hero.eyebrow')}
         domain={siteConfig.domain}
-        url={siteConfig.url}
+        homeTo={to()}
         logoAlt={common('lockupAlt')}
         fullName={t('hero.title')}
         taglineLead={t('hero.taglineLead')}
@@ -43,10 +42,10 @@ export default function Home() {
         <SectionLink to={to('services')} label={t('links.services')} />
       </ServicesSection>
       <SectorsSection items={useSectors()} title={tSectors('header.title')} lead={tSectors('header.lead')} layout="list">
-        <SectionLink to={to('sectors')} label={learnMore} />
+        <SectionLink to={to('sectors')} label={t('links.sectors')} />
       </SectorsSection>
       <ProcessSection steps={useProcessSteps()} title={tProcess('header.title')} lead={tProcess('header.lead')}>
-        <SectionLink to={to('process')} label={learnMore} />
+        <SectionLink to={to('process')} label={t('links.process')} />
       </ProcessSection>
       <ReasonsSection items={useReasons()} title={tAbout('header.title')} lead={tAbout('header.lead')}>
         <SectionLink to={to('about')} label={t('links.about')} />
@@ -55,7 +54,7 @@ export default function Home() {
         partners={partners}
         title={tPartners('header.title')}
         lead={tPartners('header.lead')}
-        linkLabel={learnMore}
+        linkLabel={t('links.partners')}
         linkTo={to('partners')}
         newTabLabel={common('newTab')}
       />

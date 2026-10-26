@@ -9,7 +9,7 @@ export default function Partners() {
 
   return (
     <>
-      <PageIntro title={t('header.title')} lead={t('header.lead')} />
+      <PageIntro title={t('header.title')} lead={t('header.lead')} meta={{ title: t('meta.title'), description: t('meta.description') }} />
       <PartnersSection partners={usePartners()} newTabLabel={common('newTab')} />
     </>
   )

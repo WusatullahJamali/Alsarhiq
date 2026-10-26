@@ -8,6 +8,7 @@ export interface PartnerView {
   name: string
   suffix?: string
   site: string
+  offline?: boolean
   role?: string
   text?: string
 }
@@ -30,18 +31,24 @@ export function PartnersSection({ partners, newTabLabel }: PartnersSectionProps)
                 {partner.suffix && <small className="ms-1.5 text-[0.55em] font-medium text-muted-foreground">{partner.suffix}</small>}
               </Heading>
               {partner.text && <p className="m-0 text-sm text-muted-foreground">{partner.text}</p>}
-              <a
-                href={`https://${partner.site}`}
-                target="_blank"
-                rel="noopener"
-                dir="ltr"
-                className="mt-auto inline-flex min-h-11 items-center gap-1.5 self-start pt-2 text-sm font-semibold text-brand hover:underline"
-                style={{ unicodeBidi: 'isolate' }}
-              >
-                {partner.site}
-                <ExternalLink aria-hidden="true" className="size-3.5" />
-                <span className="sr-only">{newTabLabel}</span>
-              </a>
+              {partner.offline ? (
+                <span dir="ltr" className="mt-auto self-start pt-2 text-sm text-muted-foreground" style={{ unicodeBidi: 'isolate' }}>
+                  {partner.site}
+                </span>
+              ) : (
+                <a
+                  href={`https://${partner.site}`}
+                  target="_blank"
+                  rel="noopener"
+                  dir="ltr"
+                  className="mt-auto inline-flex min-h-11 items-center gap-1.5 self-start pt-2 text-sm font-semibold text-brand hover:underline"
+                  style={{ unicodeBidi: 'isolate' }}
+                >
+                  {partner.site}
+                  <ExternalLink aria-hidden="true" className="size-3.5" />
+                  <span className="sr-only">{newTabLabel}</span>
+                </a>
+              )}
             </article>
           </Reveal>
         ))}

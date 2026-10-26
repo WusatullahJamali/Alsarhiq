@@ -1,9 +1,10 @@
 import { useRef, useState, type ReactNode } from 'react'
 import { Check, Copy } from 'lucide-react'
+import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { Heading } from '@/components/ui/heading'
 import { siteConfig } from '@/config/site'
-import { useLang } from '@/hooks/useLang'
+import { useLang, useLocalizedPath } from '@/hooks/useLang'
 import { cn } from '@/lib/utils'
 
 const card =
@@ -23,6 +24,7 @@ export function ContactInfo() {
   const { t } = useTranslation('contact')
   const { t: common } = useTranslation()
   const { lang } = useLang()
+  const to = useLocalizedPath()
   const [copied, setCopied] = useState(false)
   const timer = useRef<number>(undefined)
   const address = siteConfig.address[lang]
@@ -81,7 +83,7 @@ export function ContactInfo() {
 
       <div className={cn(card, 'hover:translate-y-0 hover:border-line hover:shadow-card')}>
         <Row label={common('siteLabel')}>
-          <a href={siteConfig.url} dir="ltr" className="hover:underline">{siteConfig.domain}</a>
+          <Link to={to()} dir="ltr" className="hover:underline">{siteConfig.domain}</Link>
         </Row>
       </div>
 
