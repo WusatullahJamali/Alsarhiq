@@ -27,7 +27,7 @@
     "call": {
       "aria": "Call 0770 669 9333",
       "now": "Call now",
-      "short": "Call",
+      "short": "Call us",
       "label": "Phone"
     },
     "cta": {
@@ -73,7 +73,7 @@
     },
     "meta": {
       "title": "General Contracting & Construction in Iraq | Alsarhiq",
-      "description": "Alsarhiq is an Iraqi general contracting, construction, building materials trading and real estate investment company. Request a quote."
+      "description": "Iraqi general contracting, construction, building materials trading and real estate investment company. Request a quote."
     },
     "hero": {
       "eyebrow": "Iraqi company · Limited Liability",
@@ -91,7 +91,7 @@
     "h1": "Construction, Trading & Real Estate Services in Iraq",
     "meta": {
       "title": "Construction, Trading & Real Estate Services | Alsarhiq",
-      "description": "General contracting, construction, building material supply and real estate investment services across Iraq. Request a project quotation."
+      "description": "General contracting, construction, material supply and real estate investment services across Iraq. Request a quotation."
     },
     "header": {
       "title": "Three Services. One Company.",
@@ -259,7 +259,7 @@
       }
     ],
     "meta": {
-      "description": "Alsarhiq builds, equips and maintains hospitals, schools, ministries, factories, compounds and utilities for public and private clients in Iraq."
+      "description": "We build, equip and maintain hospitals, schools, ministries, factories and compounds for public and private clients in Iraq."
     }
   },
   "process": {
@@ -291,7 +291,7 @@
       }
     ],
     "meta": {
-      "description": "See how Alsarhiq delivers construction projects in five inspected stages, from study and costing to design, structure, finishes and handover."
+      "description": "How Alsarhiq delivers construction projects in five inspected stages, from costing and design to structure, finishes and handover."
     },
     "note": {
       "title": "What You Can Expect at Every Stage",
@@ -314,7 +314,7 @@
     },
     "meta": {
       "title": "About Alsarhiq | Contracting Company in Iraq",
-      "description": "Learn about Alsarhiq, our approach to construction, project management, materials supply and real estate investment in the Iraqi market."
+      "description": "Why clients choose Alsarhiq for construction, project management, materials supply and real estate investment in Iraq."
     },
     "header": {
       "title": "Why Al-Sarh Al-Mutakamel?",
@@ -408,7 +408,7 @@
     ],
     "meta": {
       "title": "Partners & Strategic Relationships | Alsarhiq",
-      "description": "Alsarhiq works with independent partner companies in logistics, international trade, technology and AI. Details of each relationship on request."
+      "description": "Independent partner companies working with Alsarhiq in logistics, international trade, technology and AI. Details on request."
     }
   },
   "contact": {
@@ -418,7 +418,7 @@
     },
     "meta": {
       "title": "Contact Alsarhiq | Construction & Contracting Inquiries",
-      "description": "Contact Alsarhiq about contracting, construction, materials supply or real estate investment in Iraq. Send project details for a quotation."
+      "description": "Contact Alsarhiq about contracting, construction, materials supply or real estate investment in Iraq. Send details for a quote."
     },
     "header": {
       "title": "Contact Us",
@@ -514,6 +514,7 @@
     "login": {
       "title": "Sign in",
       "lead": "Enter your details to access your account.",
+      "meta": "Sign in to your Alsarhiq account with your email and password to access your account details.",
       "remember": "Remember me",
       "forgot": "Forgot password?",
       "submit": "Sign in",
@@ -524,6 +525,7 @@
     "signup": {
       "title": "Create an account",
       "lead": "Set up your account in a minute.",
+      "meta": "Create an Alsarhiq account in a minute with your name, email and a password to get started.",
       "submit": "Create account",
       "haveAccount": "Already have an account?",
       "toLogin": "Sign in",
@@ -533,6 +535,7 @@
     "forgot": {
       "title": "Reset your password",
       "lead": "Enter your email and we will send you a link to reset your password.",
+      "meta": "Forgot your Alsarhiq password? Enter your email and we will send you a link to reset it.",
       "submit": "Send reset link",
       "back": "Back to sign in",
       "success": "If this email is registered, a reset link will be sent to it."

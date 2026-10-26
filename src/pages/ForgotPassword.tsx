@@ -11,7 +11,7 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <Seo title={t('forgot.title')} description={t('forgot.lead')} noindex />
+      <Seo title={t('forgot.title')} description={t('forgot.meta')} noindex />
       <AuthShell
         title={t('forgot.title')}
         lead={t('forgot.lead')}

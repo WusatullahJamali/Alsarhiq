@@ -11,7 +11,7 @@ export default function Login() {
 
   return (
     <>
-      <Seo title={t('login.title')} description={t('login.lead')} noindex />
+      <Seo title={t('login.title')} description={t('login.meta')} noindex />
       <AuthShell
         social
         title={t('login.title')}

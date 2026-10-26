@@ -11,7 +11,7 @@ export default function Signup() {
 
   return (
     <>
-      <Seo title={t('signup.title')} description={t('signup.lead')} noindex />
+      <Seo title={t('signup.title')} description={t('signup.meta')} noindex />
       <AuthShell
         social
         title={t('signup.title')}

@@ -41,11 +41,11 @@ export function Header() {
             <LanguageSwitcher className="hidden sm:flex" />
             <Link
               to={to('login')}
-              aria-label={t('nav.login')}
               title={t('nav.login')}
               className={cn(buttonVariants({ variant: 'ghost', size: 'icon' }), 'text-foreground hover:text-brand')}
             >
-              <User className="size-5.5" />
+              <User className="size-5.5" aria-hidden />
+              <span className="sr-only">{t('nav.login')}</span>
             </Link>
             <Link to={to('contact')} className={cn(buttonVariants({ size: 'sm' }), 'ms-1 hidden nav:inline-flex')}>
               {t('cta.contact')}
